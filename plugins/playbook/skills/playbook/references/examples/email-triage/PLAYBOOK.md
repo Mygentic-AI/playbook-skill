@@ -52,6 +52,11 @@ Purpose: sort everything new in [the user's inbox] and draft replies to what nee
 - [ ] Every draft quotes or names the question it answers
 - [ ] Every draft follows references/rules.md (length, tone, banned phrases)
 
+## Reviewer focus
+A fresh reviewer (references/review.md in the skill) reads each draft against the email it answers and checks:
+does it answer every question asked, does it promise anything the user hasn't agreed to, and is anything
+filed as FYI that a person would reply to today.
+
 ## Edge cases
 - Connector not available: stop and say so. Don't triage from pasted text unless the user asks.
 - More than [100] new emails: triage the newest [100], say how many are left.

@@ -145,3 +145,16 @@ already look and who checks the output until when; records the schedule in
 Wait for the first scheduled run.
 
 ✅ It ran without you, found the playbook, and didn't redo items an earlier run handled.
+
+## K. Independent review (after D)
+
+Plant a mistake in the playbook's source material the checks can't catch (for example, an email that asks two
+questions). Then:
+
+```
+Do my <job name>.
+```
+
+✅ After the checks, a reviewer looks at the output and says whether it was a sub-agent or a self-review pass;
+the planted problem is fixed before you see the output, or logged under "Suspected" in `notes.md` with a quote
+as evidence; no rule in `rules.md` changed without asking you.

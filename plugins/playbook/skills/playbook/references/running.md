@@ -56,9 +56,15 @@ report each check as pass or fail with its evidence. List anything you couldn't 
 If more than two checks fail on the first pass, don't just patch the output: tell the
 user which part of the playbook let it happen (see `references/corrections.md`).
 
-## 5. Hand over and ask the two questions
+## 5. Independent review
 
-Give the output, the check report in a few lines, then:
+Have someone who didn't do the work review it, following `references/review.md`: a
+sub-agent if this session can start one, otherwise a separate review pass. Fix what it
+finds that can be fixed now; log the rest under "Suspected" in `notes.md`.
+
+## 6. Hand over and ask the two questions
+
+Give the output, the check report and the review in a few lines, then:
 
 1. "Anything wrong? I'll fix the playbook itself, not just this answer."
 2. "Worth keeping any of this as a template, example or script?"

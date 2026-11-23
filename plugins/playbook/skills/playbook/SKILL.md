@@ -56,6 +56,7 @@ doing playbook work.
 | corrects an output from a playbook | `references/corrections.md` |
 | "perfect, keep this", or a run went well | `references/toolbox.md` |
 | "add checks", or a playbook has none that can fail | `references/checks.md` |
+| reviewing a run's output before handing it over | `references/review.md` |
 | "what playbooks do I have?" | read `PLAYBOOKS.md` and list name + when to use |
 | "use this playbook in my other Project too" | `references/sharing.md` |
 | "run this every morning", "automate it", or a playbook's first corrected run is done | `references/scheduling.md` |
@@ -113,6 +114,9 @@ a yes; it may hold other people's messages.
 
 - **Fix the playbook, not the chat.** A correction typed into chat is gone next week.
   Write it into the folder, then rerun.
+- **Someone who didn't do the work reviews it.** After the checks, a fresh reviewer (a
+  sub-agent when the session has one) looks for what scripts can't measure. What it can't
+  fix now is logged, and a pattern becomes a proposed rule, never a silent one.
 - **A check that cannot fail is not a check.** "Looks professional" proves nothing. "Every
   figure appears in the source file" can be checked and can fail. Without real checks the
   user is still the quality control, which is the job they were handing over.

@@ -33,6 +33,14 @@
       "files": [
         "evals/files/home-with-playbook/"
       ]
+    },
+    {
+      "id": 5,
+      "prompt": "do my weekly client update for ACME Group",
+      "expected_output": "After the checks pass, runs an independent review (a sub-agent if available, otherwise a separate review pass, and says which). The reviewer gets only the output, sources, definition of done, rules and examples. Fixable findings are fixed before handing over; others are logged under 'Suspected' in notes.md with evidence; no rule is changed without the user agreeing.",
+      "files": [
+        "evals/files/home-with-playbook/"
+      ]
     }
   ]
 }
