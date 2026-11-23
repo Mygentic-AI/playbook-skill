@@ -54,21 +54,31 @@ is usually enough to see the weekly repeats. Group it, propose the categories, a
 the user correct them. People define their own mail or files badly from memory and very
 well when shown them. Say what you sampled and how much, and keep it read-only.
 
-## Start with the intent
+## Understand the intent
 
-Before the steps, find out what the job is *for*. Rules cover the cases the user thought of;
-the intent is how you decide the ones they didn't, and how you know when to ask instead.
-Ask, one at a time:
+Your first goal is to understand what this job is *for*: what the user wants from it, what
+would go wrong if it were done badly or not at all, and which parts must be done well. The
+intent is what anchors everything after it. It is how you decide the cases no rule covers,
+how you know when to ask instead, and how you judge whether a change makes the playbook
+better or just different.
 
-- "What do you want this job to get you? What's better when it's done well?"
-- "What are you afraid it will miss? What would cause you harm, confusion or trouble later
-  if it slipped through?"
-- "Where's the trade-off? What can safely be ignored, and what can't?"
-- "When something isn't covered by a rule, should I decide by that, or ask you?"
+This is a goal, not a list of questions. Don't open with a battery of "what do you want"
+questions. Start with the job itself ("Tell me about the last time you did this"), listen
+for why it matters, and follow up where the reason is thin. Useful directions to probe,
+in your own words and only as far as needed:
 
-Write the answers into the "Intent" section of `PLAYBOOK.md` in the user's own words. An
-answer like "I want a clean inbox, but I don't want to miss anything that could hurt me
-later" shapes every step after it. Come back to it when a later answer conflicts with it.
+- what they want the job to get them, and what's better when it's done well;
+- what would happen if it were done badly, or not done at all;
+- which parts must be done well, and which can be rough;
+- what can safely be skipped, and what never can;
+- when something isn't covered by a rule, whether they'd rather you decide or ask.
+
+When you think you have it, say it back in two or three sentences and ask if that's right.
+Example: "So the point is a clean inbox you're not afraid to open. Most email can go
+unread with no harm, but anything that could cause you trouble later has to reach you.
+Is that it?" Write the confirmed version into the "Intent" section of `PLAYBOOK.md`, in
+the user's words. If a later answer conflicts with it, point that out and settle which
+one is right.
 
 ## What to cover
 
@@ -96,7 +106,7 @@ Create `playbooks/<job-name>/` from `assets/playbook-template/` (kebab-case name
 `weekly-client-update`). Fill `PLAYBOOK.md`:
 
 - **Purpose:** one line.
-- **Intent:** the user's answers from "Start with the intent", in their words.
+- **Intent:** the version the user confirmed in "Understand the intent", in their words.
 - **When to use this:** one or two lines a different chat could match against. Make it
   specific enough that two playbooks are never confused.
 - **Inputs:** what and where.

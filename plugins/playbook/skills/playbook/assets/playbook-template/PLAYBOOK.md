@@ -8,8 +8,9 @@ Purpose: [one line]
 <!-- Why this job exists, in the user's words. Claude decides by this when no rule covers a
      case, and asks when the intent doesn't settle it. -->
 - What I want: [the outcome, e.g. "a clean inbox I'm not afraid to open"]
-- What I'm afraid of: [what must never be missed, e.g. "anything that could cause me harm,
-  confusion or problems later if I don't read it"]
+- What goes wrong if it's done badly: [e.g. "a client sees a wrong number and stops trusting
+  the report"]
+- What must be done well: [the parts that can't be rough]
 - The trade-off: [e.g. "most email can go unread with no harm; the rest must reach me"]
 - Decide on your own when: [...]. Ask me when: [...].
 

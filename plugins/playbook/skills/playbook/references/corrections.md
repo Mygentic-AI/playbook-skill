@@ -19,11 +19,17 @@ underlying rule may still be worth adding; ask.
 | **Toolbox** | you rebuilt something that already existed, or used a saved file that's out of date | point the step at the file; update or replace the stale file |
 | **Script** | a script has a bug, or reads the wrong thing | fix the code; rerun it on the case that failed |
 | **Checks** | the output was wrong and no check caught it | add a check that would have failed on this output |
+| **Intent** | the correction doesn't fit the "Intent" section: the job is for something the playbook didn't know | say what you've learned in one line, update "Intent" once the user confirms, then check the other rules still fit it |
 
 Often two parts failed: the step that produced the error and the check that missed it.
 Fix both. When adding a check, follow `references/checks.md`.
 
 ## 2. Make the smallest fix that lasts
+
+**Test the fix against the intent.** A fix should make the playbook serve its intent
+better, not just silence this one complaint. If the fix you're about to make would work
+against the intent (for example, a rule that hides more mail when the intent is not to
+miss anything that matters), say so and ask which one should win.
 
 **Prefer data to rules.** Many corrections are facts about one item, not new behaviour:
 "don't mention this sender", "this sender has a second address", "this client's name is

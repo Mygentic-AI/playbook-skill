@@ -118,6 +118,9 @@ a yes; it may hold other people's messages.
 
 - **Fix the playbook, not the chat.** A correction typed into chat is gone next week.
   Write it into the folder, then rerun.
+- **The intent anchors every improvement.** Each playbook records what the job is for and
+  what must be done well. Claude decides uncovered cases by it, the reviewer judges by it,
+  and every fix is tested against it. It's found in conversation, not by a list of questions.
 - **Someone who didn't do the work reviews it.** After the checks, a fresh reviewer (a
   sub-agent when the session has one) looks for what scripts can't measure. What it is
   certain breaks a written rule is fixed and the playbook tightened; what could go either
