@@ -33,9 +33,10 @@ ladder and write each rung into `rules.md` with the date it was turned on:
 5. send, post or delete
 
 Start at the lowest rung the job needs. Each higher rung is turned on only when the user
-agrees to it, never assumed from the job description. Do offer a rung that would clearly
-help, and say what it does. For email, offer labelling: "I can also label each email with
-its category, so you see the sorting in your inbox. Want that?" Turn it on only on a yes, and the check script verifies that
+agrees to it, never assumed from the job description. Recommend the rungs that would
+clearly help, plainly and with the reason, as a recommendation rather than a timid
+option. For email: "I recommend letting me label each email with its category, so the
+sorting shows up in your inbox. Shall I?" Turn it on only on a yes, and the check script verifies that
 no action above the agreed rung was taken. For email, sending stays off unless the user
 turns it on, and then only for drafts they approve in the chat. Never set up automatic
 sending.
@@ -43,7 +44,9 @@ sending.
 ## Look at the data before you ask about it
 
 When the job works on data a connector can show you (an inbox, a folder, a sheet, a
-calendar), pull a real sample before the questions about categories and rules: two weeks
+calendar), first ask: "Is there anything I shouldn't open, like bank, health or legal
+mail?" Write the answer into `rules.md` as "Never read". Then pull a real sample, skipping
+anything on that list, before the questions about categories and rules: two weeks
 is usually enough to see the weekly repeats. Group it, propose the categories, and let
 the user correct them. People define their own mail or files badly from memory and very
 well when shown them. Say what you sampled and how much, and keep it read-only.

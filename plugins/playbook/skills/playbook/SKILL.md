@@ -105,8 +105,9 @@ Users should not have to learn modes. These two questions are how corrections an
 tools reach the folder. Keep them to one line each. After a rerun that follows a
 correction, ask only "Anything else wrong?", but go back to asking both on the next
 normal run: the save question is easy to drop, and dropping it leaves the examples folder
-empty. The first time the owner accepts a run with no corrections, save that output to
-`references/examples/` without waiting to be asked, and say so in one line.
+empty. The first time the owner accepts a run with no corrections, ask in one line:
+"Save this run as the example of a good one?" Save it to `references/examples/` only on
+a yes; it may hold other people's messages.
 
 ## Principles, and why
 
@@ -121,5 +122,9 @@ empty. The first time the owner accepts a run with no corrections, save that out
 - **A playbook nobody runs is a document.** Once the first run is corrected, offer to
   schedule it, send the output where the user already looks, and name an owner
   (`references/scheduling.md`).
+- **Recommend boldly, act only on a yes.** Anything that sends, changes or deletes needs
+  the user's agreement, but a skill that never suggests anything useful is useless.
+  When an action would clearly help (labelling, a summary email, a schedule), recommend
+  it plainly with the reason, then wait for the yes.
 - **The user's words beat your draft.** You write the files, but every rule comes from
   the user. When unsure, ask rather than invent a rule.

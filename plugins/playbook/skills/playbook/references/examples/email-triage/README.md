@@ -19,6 +19,12 @@ What it shows:
 
 ## Questions this example adds to the interview
 
+Ask this first, before reading anything: **Is there any mail I should never open (banks,
+health, legal)?** Write it into rules.md as "Never read"; that mail is sorted by sender and
+subject only. Then sample the last two weeks of the inbox, skipping that mail, and show
+the user the senders grouped by kind: it is much easier to name VIPs and categories from
+a real list.
+
 1. Which inbox, through which connector?
 2. Who are your VIPs, whose email always needs a reply today? (exact addresses or domains)
 3. What belongs to someone else, and who handles it?
@@ -27,13 +33,13 @@ What it shows:
 6. Any senders or kinds of email to never reply to?
 7. Can you show me a past reply you liked? (it becomes the approved example)
 8. How far back should the first run go, and is there a maximum number of emails per run?
-9. Shall I label each email with its category in your inbox? (Off unless they say yes;
-   if yes, set "Label: yes" with today's date in rules.md.)
-10. Is there any mail I should never open (banks, health, legal)? I'll file it by sender
-   and subject only.
-
-Before question 2, sample the last two weeks of the inbox read-only and show the user the
-senders grouped by kind: it is much easier to name VIPs and categories from a real list.
+9. Recommend labelling: "I recommend letting me label each email with its category, so
+   the sorting shows up in your inbox. Shall I?" Only a yes turns it on ("Label: yes"
+   with today's date in rules.md).
+10. Recommend a summary email: "I recommend I email you a short summary after each run,
+   so you see what needs you without opening anything else. That counts as sending, so I
+   need your yes." Only a yes turns it on ("Email me a summary of each run: yes" with
+   the date).
 
 In this example `references/people.md` replaces the generic template's `data.md`, and
 `state.md` holds the last-run date so it isn't buried in the corrections log.
