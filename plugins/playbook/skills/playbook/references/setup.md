@@ -87,13 +87,22 @@ date. Then read it back.
 - If the write or the read-back fails, stop and tell the user exactly what failed. Do not
   continue setup with nowhere to save.
 
-## 5. Project homes: one line for the Project instructions
+## 5. Project homes: the Project instructions block
 
-Offer this line for the user to paste into the Project's custom instructions, so the skill
-is used reliably in every chat there:
+You can't edit a Project's custom instructions; the user pastes them. Give them this block
+now, and a complete updated version every time a playbook is added, renamed, or its
+"Asked for with" phrases change (see `references/interview.md`), so they replace the old
+block rather than editing it:
 
-> This Project keeps playbooks in its files (see PLAYBOOKS.md). For any job listed there,
-> and for any correction to a playbook's output, use the playbook skill.
+```
+This Project keeps playbooks in its files (see PLAYBOOKS.md). Use the playbook skill for
+any job below, and for any correction to a playbook's output.
+- "triage my email", "go through my inbox", "anything urgent?" -> email-triage playbook
+- "do my weekly report", "Monday numbers" -> weekly-report playbook
+```
+
+List one line per playbook, with the phrases from its "Asked for with" field. Before the
+first playbook exists, give only the first two lines.
 
 ## 6. Pick the first job
 

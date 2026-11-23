@@ -116,7 +116,13 @@ Create `playbooks/<job-name>/` from `assets/playbook-template/` (kebab-case name
   already mentioned.
 - **Edge cases.**
 
-Add an entry to `PLAYBOOKS.md`: name, folder, "when to use this" line, date created.
+Ask how they'll ask for it: "When you want this done, what will you usually say?" Collect
+two or three phrases, and add any obvious ones they didn't mention. If a phrase could
+also fit another playbook, point it out and pick different words.
+
+Add an entry to `PLAYBOOKS.md`: name, folder, "when to use this" line, "asked for with"
+phrases, date created. In a Project home, give the user the complete updated Project
+instructions block to paste (`references/setup.md`, step 5).
 
 Save any material the user gave you: approved past outputs into `references/examples/`,
 templates into `assets/`, names and targets into `references/data.md`. List each in

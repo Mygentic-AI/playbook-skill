@@ -2,7 +2,8 @@
 
 ## 1. Find it
 
-Read `PLAYBOOKS.md` and pick the entry whose "when to use this" matches the request. If
+Read `PLAYBOOKS.md` and pick the entry whose "when to use this" or "asked for with"
+phrases match the request. If
 two could match, ask which one, then suggest sharpening their "when to use" lines so it
 doesn't happen again. If none matches, say so and offer to make one
 (`references/interview.md`).

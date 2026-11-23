@@ -12,7 +12,7 @@ Set up my playbooks. I want to use them on my phone too.
 ```
 
 ✅ Explains playbooks in a few lines; says files will be stored in this Project; writes
-`PLAYBOOKS.md` and reads it back; offers a line for the Project instructions; asks for a
+`PLAYBOOKS.md` and reads it back; gives a Project instructions block to paste; asks for a
 first job; interviews ONE question at a time, at least eight, before writing.
 
 ## B. First run, outside any Project, no folder
@@ -161,3 +161,15 @@ Do my <job name>.
 The run ends with two lists. "Fixed, and the playbook updated" holds only things that broke a rule you already
 wrote, each with what changed and where. "Needs your call" holds anything that could go either way, each with a
 suggested rule; nothing in `rules.md` changes until you answer.
+
+## L. Asking by phrase (Project home, after the instructions block is pasted)
+
+New chat in the Project, using one of the playbook's "asked for with" phrases, not its name:
+
+```
+Anything urgent in my inbox?
+```
+
+✅ Runs the email-triage playbook (says so), rather than triaging from scratch with the connector.
+After adding a second playbook, Claude hands you a complete updated instructions block with one
+line per playbook.
