@@ -5,6 +5,26 @@ per job, holding the steps, the tools that worked, checks that can fail, and a l
 correction. When Claude gets something wrong, it fixes the playbook, not just the answer,
 so the next run starts better.
 
+## Why not just a skill?
+
+A skill can hold steps, scripts, references and templates too, and you can write your own or copy
+one and change it. The difference is who keeps it up to date.
+
+- **A skill changes only when you approve it.** In the Claude app, every edit to a skill goes
+  through you on a review card. That's right for something settled, but the small corrections a
+  job collects every week rarely make it in.
+- **A playbook is your own folder.** It lives on your computer or in a Claude Project, so Claude
+  writes each fix straight in after a run, saves approved examples, and adds a check so the same
+  mistake doesn't come back.
+- **One skill, many playbooks.** This skill is the method: interview, run, check, correct. Each job
+  you add is just another folder, not another skill to write and install.
+
+A playbook is your job, written down, and it changes every time you correct it.
+
+The trade-off: a skill works in every chat, while a playbook works only where its folder is
+connected or inside its Project. A good split is to keep a job as a playbook while it's still
+collecting corrections, and turn it into a skill once its notes stop growing.
+
 ## Install
 
 ### Claude app (desktop, web): upload the ZIP
