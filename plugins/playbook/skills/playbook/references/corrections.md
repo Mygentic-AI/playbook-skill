@@ -31,6 +31,13 @@ better, not just silence this one complaint. If the fix you're about to make wou
 against the intent (for example, a rule that hides more mail when the intent is not to
 miss anything that matters), say so and ask which one should win.
 
+**Never drop a good improvement just because it clashes with the intent.** The intent was
+written by Claude from a conversation, and it may have filled a gap wrongly or missed a
+nuance. When an improvement is sound on its own merits but goes against the written
+intent, bring both to the user: the improvement, why it looks right, the line of the
+intent it conflicts with, and a suggested rewording of that line. The clash is often the
+first sign the intent needs adjusting.
+
 **Prefer data to rules.** Many corrections are facts about one item, not new behaviour:
 "don't mention this sender", "this sender has a second address", "this client's name is
 ACME Group". Store those as a marker or a line in the reference data the playbook already

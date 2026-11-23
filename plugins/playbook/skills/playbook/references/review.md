@@ -59,6 +59,13 @@ Use the "Intent" section as the lens for anything the rules don't cover: does th
 what the job is for, and could anything it skipped cause the harm the user is afraid of? A
 finding that rests on the intent alone, not a written rule, is kind 2.
 
+The intent can be wrong too: Claude wrote it from a conversation and may have missed a
+nuance. If the reviewer sees an improvement that is sound on its own merits but conflicts
+with the written intent, it doesn't discard it and doesn't make it automatically. It goes
+under "Needs your call" with the conflicting line of the intent and a suggested rewording,
+so the user can decide whether the improvement or the intent should change. A kind 1 fix
+that would conflict with the intent becomes kind 2 for the same reason.
+
 **2. Unsure: it might be wrong, or it could go either way.** Example: "I put this in FYI, but
 it could be reply-today." Or a draft that may be too blunt for this client.
 
