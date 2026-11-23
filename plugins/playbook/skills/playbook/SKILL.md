@@ -1,0 +1,99 @@
+---
+name: playbook
+description: Build and run playbooks, one folder per job the user repeats (steps, scripts, reference files, good examples, checks, a corrections log), kept on their computer or in a Claude Project and improved every time they correct the output. Use whenever the user says "set up my playbooks", "make a playbook for X", "do my weekly X", "run my X playbook", "what playbooks do I have", or describes work they do every week and want to hand off, such as client updates, invoice chasing, content repurposing, reports or hiring screens. Also use right after a playbook run when the user corrects the result ("that's wrong again", "same mistake as last time", "no, it should be...") so the fix goes into the playbook and not just the chat, and when they approve a result ("perfect, keep this") so the good version is saved as a template, example or script. Use it even when the user doesn't say "playbook" if a PLAYBOOKS.md file is in the connected folder or the Project's files.
+---
+
+# Playbook
+
+A playbook is one folder per job the user repeats. It holds their judgment written down
+(the steps and the rules for each decision), the tools that worked (scripts, templates,
+reference data, approved examples), checks that can fail, and a log of every correction.
+Each time the user corrects an output, the fix goes into the folder, so next week's run
+starts smarter. The chat closes; the folder remains.
+
+The method comes from "The AI Delegation Loop" by The Actionable AI
+(theactionableai.com/guides/ai-delegation-loop). The wording here is our own.
+
+## Before anything else, in every chat: find the playbook home
+
+Playbooks are the user's data and must survive the chat. They can live in exactly two
+kinds of place, and the user chooses which at setup:
+
+| Home | Where the files are | Works from |
+|---|---|---|
+| **On their computer** | a dedicated folder, normally `~/Playbooks`, connected to this chat | desktop; the phone too, but only while the desktop app is installed, open, active and the computer is online (saving changes from the phone is not yet confirmed: if a write fails there, say so) |
+| **In a Claude Project** | the Project's files | any chat inside that Project, desktop or phone. Chats outside it, or in other Projects, cannot see it |
+
+Work out which one you have from what you can actually do, not from tool names:
+
+1. **A folder is connected and contains `PLAYBOOKS.md`** → local home. Use it.
+2. **This chat is inside a Project and the Project's files include a `PLAYBOOKS.md`**
+   (search for it; it may sit under a prefix such as `claude/`) → Project home. Use it.
+3. **Neither, but the user is asking to set up** → read `references/setup.md`.
+4. **Neither, and the user wants to run or fix a playbook** → stop and say what is
+   missing in one or two plain sentences, for example: "I can't see your playbooks in
+   this chat. Connect your Playbooks folder, or open the Project they live in and ask
+   again." Do not carry on: anything you write would vanish when the chat ends.
+
+Never ask for a broad folder such as Documents, Desktop or the home folder. Connecting
+a folder exposes everything in it to the chat. Ask for the Playbooks folder by name.
+
+Folder access lasts one chat. In a new chat, ask for the Playbooks folder again before
+doing playbook work.
+
+## What the user wants → what to read
+
+| The user says | Read |
+|---|---|
+| "set up my playbooks", first time, no home yet | `references/setup.md` |
+| "make a playbook for X", "I do X every week" | `references/interview.md` |
+| "do my X", "run the X playbook" | `references/running.md` |
+| corrects an output from a playbook | `references/corrections.md` |
+| "perfect, keep this", or a run went well | `references/toolbox.md` |
+| "add checks", or a playbook has none that can fail | `references/checks.md` |
+| "what playbooks do I have?" | read `PLAYBOOKS.md` and list name + when to use |
+| "use this playbook in my other Project too" | `references/sharing.md` |
+
+## Layout of a home
+
+```
+<home>/
+├── PLAYBOOKS.md                 index: storage choice, then one entry per playbook
+└── playbooks/
+    └── <job-name>/
+        ├── PLAYBOOK.md          purpose, when to use, inputs, steps, decisions, checks
+        ├── scripts/             code for mechanical steps and for checks
+        ├── references/          INDEX.md, rules, reference data, examples/
+        ├── assets/              templates copied into the output
+        └── notes.md             corrections log, newest first
+```
+
+Starting files are in `assets/playbook-template/` and `assets/PLAYBOOKS.md`. In a local
+home you can copy them with `scripts/new_playbook.py <home> <job-name>`. In a Project
+home there is no copy command: write each file into the Project one by one, using the
+template text.
+
+`PLAYBOOK.md` is deliberately not called `SKILL.md`. Playbooks are data this skill reads,
+not separate skills, and the name keeps them from being mistaken for one.
+
+## After every playbook run, ask two short questions
+
+1. "Anything wrong? I'll fix the playbook itself, not just this answer."
+2. "Worth keeping any of this as a template, example or script?"
+
+Users should not have to learn modes. These two questions are how corrections and saved
+tools reach the folder. Keep them to one line each. After a rerun that follows a
+correction, ask only "Anything else wrong?"
+
+## Principles, and why
+
+- **Fix the playbook, not the chat.** A correction typed into chat is gone next week.
+  Write it into the folder, then rerun.
+- **A check that cannot fail is not a check.** "Looks professional" proves nothing. "Every
+  figure appears in the source file" can be checked and can fail. Without real checks the
+  user is still the quality control, which is the job they were handing over.
+- **Say what was not saved.** If a write fails, or there is no home, tell the user plainly.
+  Never let them believe a correction was stored when it wasn't.
+- **One file per purpose.** Two near-identical files is how the wrong one gets used.
+- **The user's words beat your draft.** You write the files, but every rule comes from
+  the user. When unsure, ask rather than invent a rule.

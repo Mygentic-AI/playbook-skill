@@ -1,0 +1,93 @@
+# Playbook
+
+A skill for the Claude app that turns the work you repeat into **playbooks**: one folder
+per job, holding the steps, the tools that worked, checks that can fail, and a log of every
+correction. When Claude gets something wrong, it fixes the playbook, not just the answer,
+so next week's run starts better.
+
+Based on the method in [The AI Delegation Loop](https://theactionableai.com/guides/ai-delegation-loop/read)
+by The Actionable AI. The skill's wording and prompts are our own.
+
+## Install
+
+### Claude app (desktop, web): upload the ZIP
+
+1. Download `playbook.zip` from the [latest release](https://github.com/Mygentic-AI/playbook-skill/releases/latest).
+   Use the release file, not GitHub's "Source code" ZIP, which has the wrong layout.
+2. In the Claude app: **Customize → Skills → + → Create skill → Upload a skill**, and pick the ZIP.
+3. Make sure **Code execution and file creation** is switched on.
+
+Skills belong to your account. We've used it on desktop; the phone app is listed under "Not tested yet" below.
+
+### From GitHub as a plugin
+
+- **Claude Code:** `/plugin marketplace add Mygentic-AI/playbook-skill`, then `/plugin install playbook@playbook-skill`.
+- **Claude app:** some guides describe **Customize → Plugins → Add marketplace** with this
+  repo's URL. We haven't tried this route in the app yet.
+
+## Get started
+
+Say:
+
+> **Set up my playbooks**
+
+Claude explains what a playbook is, asks where you want yours kept, helps you pick a first
+job, interviews you about it, writes the playbook, and runs it once on a real example so
+you can make your first correction. Have a real piece of that work at hand; the first
+session takes about half an hour.
+
+## Where your playbooks live: your choice
+
+| | **On your computer** | **In a Claude Project** |
+|---|---|---|
+| Files are | in a `Playbooks` folder on your computer | in your Claude account, in one Project |
+| Desktop | any chat with the folder connected | chats inside that Project |
+| Phone | only while the desktop app is open and active and the computer is online (not fully tested) | chats inside that Project, any time |
+| Privacy | data stays on your computer | data is stored by Claude |
+
+**On your computer:** create an empty `Playbooks` folder yourself and connect only that
+folder. Don't connect Documents or your home folder: the chat can see everything in a
+connected folder. Access lasts one chat, so connect it at the start of each new chat.
+
+**In a Project:** create the Project yourself (Claude can't), and do your playbook work in
+chats inside it. Chats outside it, or in other Projects, can't see its playbooks. A
+playbook you need in several Projects is copied into each; the skill helps with that.
+
+## Everyday phrases
+
+| Say | What happens |
+|---|---|
+| "set up my playbooks" | first-time setup |
+| "make a playbook for my invoice chasing" | interview, then a new playbook |
+| "do my weekly client update" | runs that playbook, checks it, reports pass/fail |
+| "what playbooks do I have?" | lists them |
+
+After every run, Claude asks whether anything was wrong and whether to keep anything as a
+template, example or script. Answer in plain words; it updates the playbook.
+
+## What's been tested
+
+Working in a Claude Project (tested by hand, November 2026):
+- Claude creates files in the Project, in subfolders, and a new chat finds them.
+- A script saved in the Project runs unchanged in a later chat.
+- Corrections saved in one chat are there in the next, and an older open chat sees them.
+
+Working from the phone with files on the computer:
+- A phone chat reaches the computer through the desktop app while it's open, and can list
+  the files in a connected folder.
+
+Not tested yet:
+- Opening or writing files in a computer folder from the phone.
+- Phone and desktop opening the same Project's playbooks.
+- The skill triggering inside a Project on the phone.
+- Images, logos and other non-text files in a Project (Project files come through as text).
+- Installing from GitHub inside the Claude app.
+
+## For contributors
+
+- The skill: `plugins/playbook/skills/playbook/`
+- App test prompts: [`TESTING.md`](TESTING.md)
+- Skill-creator evals: `evals/` (from Claude Code these cover the computer-folder home only)
+- Build the release ZIP: `./build.sh` → `dist/playbook.zip`
+
+MIT licensed.

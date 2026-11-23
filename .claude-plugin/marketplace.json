@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "playbook-skill",
+  "description": "Playbooks: one folder per job you repeat, improved every time you correct the output.",
+  "owner": {
+    "name": "Mygentic-AI"
+  },
+  "plugins": [
+    {
+      "name": "playbook",
+      "description": "Build and run playbooks: one folder per recurring job (steps, scripts, references, checks, corrections log), kept on your computer or in a Claude Project.",
+      "author": {
+        "name": "Mygentic-AI"
+      },
+      "source": "./plugins/playbook",
+      "category": "productivity",
+      "homepage": "https://github.com/Mygentic-AI/playbook-skill"
+    }
+  ]
+}

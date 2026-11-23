@@ -1,0 +1,56 @@
+# Corrections: fix the playbook, not the chat
+
+When the user says an output is wrong, the answer in chat is the least important part.
+The playbook let the mistake through, and it will do so again next week unless the folder
+changes.
+
+## 0. Check the mistake is really in the output
+
+Look at the output the user is correcting. If the mistake isn't there (for example they
+say the name was misspelled, but the output never names the client), say so in one line
+and ask what they saw, rather than "fixing" something that didn't happen. The
+underlying rule may still be worth adding; ask.
+
+## 1. Find which part failed
+
+| Part | It failed if… | Fix |
+|---|---|---|
+| **Steps** | a step was missing, out of order, or a rule lived only in the user's head | add or reorder the step; write the rule into "Decisions" |
+| **Toolbox** | you rebuilt something that already existed, or used a saved file that's out of date | point the step at the file; update or replace the stale file |
+| **Script** | a script has a bug, or reads the wrong thing | fix the code; rerun it on the case that failed |
+| **Checks** | the output was wrong and no check caught it | add a check that would have failed on this output |
+
+Often two parts failed: the step that produced the error and the check that missed it.
+Fix both. When adding a check, follow `references/checks.md`.
+
+## 2. Make the smallest fix that lasts
+
+Change the playbook's files, not just this output. Prefer one precise line over a
+paragraph. If the same mistake has happened before (check `notes.md`), don't add a gentle
+reminder; add an explicit rule or a check.
+
+## 3. Log it
+
+Add one line to the top of `notes.md`:
+
+```
+2026-11-23 | figures rounded to thousands | steps + checks: step 2 says exact figures; added figure-match check
+2026-11-30 | figures rounded again (2nd) | checks: check now runs as scripts/check_figures.py
+```
+
+Date, what went wrong (mark repeats), which part or parts, what changed.
+
+## 4. Rerun and show the difference
+
+Run the job again from the playbook, not from memory of the conversation, and show the
+user before and after. Then say in one line what you changed in the playbook, and ask only: "Anything else
+wrong?" (the save question can wait for a normal run).
+
+If the fix couldn't be saved (no home in this chat, write failed), say so plainly and give
+the user the change so it isn't lost.
+
+## Monthly
+
+Read `notes.md`. Several entries in the same part means that part needs more than
+patching: steps that keep going wrong may need splitting, and a recurring mechanical
+error is a script waiting to be written.

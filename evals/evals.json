@@ -1,0 +1,30 @@
+{
+  "skill_name": "playbook",
+  "note": "Run from Claude Code these exercise the local-folder home only. Project homes and the phone are covered by TESTING.md, pasted into the Claude app.",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "set up my playbooks. my Playbooks folder is evals/files/empty-home (already created and empty). I'd like to keep everything on my computer. first job: every monday I send our 3 ad clients a short update on last week's spend vs plan, the numbers come from a CSV export",
+      "expected_output": "Explains playbooks briefly, confirms local storage, writes and reads back PLAYBOOKS.md in the folder, then begins the interview with ONE question (not a drafted playbook).",
+      "files": [
+        "evals/files/empty-home/"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "do my weekly client update for ACME Group",
+      "expected_output": "Finds weekly-client-update in PLAYBOOKS.md, follows its steps, runs every check with evidence, reports pass/fail, ends with the two after-run questions.",
+      "files": [
+        "evals/files/home-with-playbook/"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "that's wrong again - you called the client 'Acme Corp', it's 'ACME Group'. second time this happened",
+      "expected_output": "Diagnoses which parts failed (data/rules and checks), adds an explicit rule or check rather than a reminder, logs one line at the top of notes.md, reruns and shows before/after.",
+      "files": [
+        "evals/files/home-with-playbook/"
+      ]
+    }
+  ]
+}
