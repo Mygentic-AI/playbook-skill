@@ -58,19 +58,22 @@ doing playbook work.
 | "add checks", or a playbook has none that can fail | `references/checks.md` |
 | "what playbooks do I have?" | read `PLAYBOOKS.md` and list name + when to use |
 | "use this playbook in my other Project too" | `references/sharing.md` |
+| "run this every morning", "automate it", or a playbook's first corrected run is done | `references/scheduling.md` |
 | wants an email-triage playbook and has none yet | `references/interview.md`, starting from `references/examples/email-triage/` |
 
 ## Layout of a home
 
 ```
 <home>/
-├── PLAYBOOKS.md                 index: storage choice, then one entry per playbook
+├── PLAYBOOKS.md                 index: storage choice, schedule, one entry per playbook
+├── shared/                      data two or more playbooks read (e.g. a sender list)
 └── playbooks/
     └── <job-name>/
         ├── PLAYBOOK.md          purpose, when to use, inputs, steps, decisions, checks
         ├── scripts/             code for mechanical steps and for checks
         ├── references/          INDEX.md, rules, reference data, examples/
         ├── assets/              templates copied into the output
+        ├── state.md             recurring jobs only: last run and ids already handled
         └── notes.md             corrections log, newest first
 ```
 
@@ -85,6 +88,11 @@ models to start an interview from, never a user's playbook: don't run them, don'
 them as the user's playbooks, and don't copy them into a home unchanged. Tell the user
 when you're starting from one.
 
+**Shared files.** When two playbooks need the same data (a sender list, a client list),
+keep one copy in `<home>/shared/` and point both playbooks' `INDEX.md` at it. Don't park it
+inside one playbook's folder: the other playbook then depends on a folder it doesn't own.
+Scripts name every file they read at the top, so a Project run can recreate exactly those.
+
 `PLAYBOOK.md` is deliberately not called `SKILL.md`. Playbooks are data this skill reads,
 not separate skills, and the name keeps them from being mistaken for one.
 
@@ -95,7 +103,10 @@ not separate skills, and the name keeps them from being mistaken for one.
 
 Users should not have to learn modes. These two questions are how corrections and saved
 tools reach the folder. Keep them to one line each. After a rerun that follows a
-correction, ask only "Anything else wrong?"
+correction, ask only "Anything else wrong?", but go back to asking both on the next
+normal run: the save question is easy to drop, and dropping it leaves the examples folder
+empty. The first time the owner accepts a run with no corrections, save that output to
+`references/examples/` without waiting to be asked, and say so in one line.
 
 ## Principles, and why
 
@@ -107,5 +118,8 @@ correction, ask only "Anything else wrong?"
 - **Say what was not saved.** If a write fails, or there is no home, tell the user plainly.
   Never let them believe a correction was stored when it wasn't.
 - **One file per purpose.** Two near-identical files is how the wrong one gets used.
+- **A playbook nobody runs is a document.** Once the first run is corrected, offer to
+  schedule it, send the output where the user already looks, and name an owner
+  (`references/scheduling.md`).
 - **The user's words beat your draft.** You write the files, but every rule comes from
   the user. When unsure, ask rather than invent a rule.

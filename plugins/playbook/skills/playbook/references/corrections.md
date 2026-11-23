@@ -25,6 +25,13 @@ Fix both. When adding a check, follow `references/checks.md`.
 
 ## 2. Make the smallest fix that lasts
 
+**Prefer data to rules.** Many corrections are facts about one item, not new behaviour:
+"don't mention this sender", "this sender has a second address", "this client's name is
+ACME Group". Store those as a marker or a line in the reference data the playbook already
+reads (`references/data.md`, or a shared list), and add a check that the marker is
+honoured. Write a new rule in `rules.md` only when the behaviour itself changes. Rules
+written for single cases pile up, and sooner or later two of them disagree.
+
 Change the playbook's files, not just this output. Prefer one precise line over a
 paragraph. If the same mistake has happened before (check `notes.md`), don't add a gentle
 reminder; add an explicit rule or a check.

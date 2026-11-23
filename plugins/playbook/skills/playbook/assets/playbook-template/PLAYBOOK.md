@@ -1,5 +1,7 @@
 # [Job name]
 
+Job: [one sentence, e.g. "Every Monday, send each client last week's spend against plan."]
+
 Purpose: [one line]
 
 ## When to use this

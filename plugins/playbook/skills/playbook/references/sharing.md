@@ -8,7 +8,8 @@ two clients) lives as one full copy in each.
 
 You can't reach the other Project from here. Instead:
 
-1. Gather every file of the playbook.
+1. Gather every file of the playbook, plus any file it reads from `<home>/shared/`
+   (check its `INDEX.md` and the top of each script).
 2. Add an "Origin" line at the top of `PLAYBOOK.md` in the copy:
    `Origin: copied from <Project or folder name>, <date>.`
 3. Give the user the files to add to the other Project, either as a single download or as

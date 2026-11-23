@@ -23,9 +23,28 @@ Remove the EXAMPLE TEMPLATE banner from the files you write for them. Where the 
 files differ from the generic template (e.g. `people.md` instead of `data.md`), use the
 example's and drop the generic file, so there's one file per purpose.
 
-For email, always ask what Claude may do in the inbox. The default is read and draft
-only. Sending is allowed only if the user turns it on, and then only for drafts they
-approve in the chat. Never set up automatic sending.
+For anything that touches an account (an inbox, a drive, a CRM), agree permissions as a
+ladder and write each rung into `rules.md` with the date it was turned on:
+
+1. read
+2. label or tag
+3. move or archive
+4. draft
+5. send, post or delete
+
+Start at the lowest rung the job needs. Each higher rung is turned on only when the user
+asks for it, never assumed from the job description, and the check script verifies that
+no action above the agreed rung was taken. For email, sending stays off unless the user
+turns it on, and then only for drafts they approve in the chat. Never set up automatic
+sending.
+
+## Look at the data before you ask about it
+
+When the job works on data a connector can show you (an inbox, a folder, a sheet, a
+calendar), pull a real sample before the questions about categories and rules: two weeks
+is usually enough to see the weekly repeats. Group it, propose the categories, and let
+the user correct them. People define their own mail or files badly from memory and very
+well when shown them. Say what you sampled and how much, and keep it read-only.
 
 ## What to cover
 
@@ -39,6 +58,10 @@ approve in the chat. Never set up automatic sending.
 6. **Edge cases.** What went wrong in the past? What's unusual but recurring?
 7. **Standard and tone.** Who reads it? What does "good" sound like? Words to avoid?
 8. **What a bad version looks like.** This is often where the real rules come out.
+9. **What not to touch.** "Is there anything I shouldn't read, open or change at all?"
+   (banks, health, a folder of contracts). Write the answer into `rules.md` as a hard rule.
+10. **When it should run.** If the job is recurring: how often, what time, which timezone.
+    You'll need this for `references/scheduling.md`.
 
 ## Write the playbook
 

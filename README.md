@@ -62,6 +62,7 @@ playbook you need in several Projects is copied into each; the skill helps with 
 | "do my weekly client update" | runs that playbook, checks it, reports pass/fail |
 | "what playbooks do I have?" | lists them |
 | "make me an email triage playbook" | starts from the bundled example template |
+| "make it run every morning" | schedules a playbook that has had its first corrected run |
 
 After every run, Claude asks whether anything was wrong and whether to keep anything as a
 template, example or script. Answer in plain words; it updates the playbook.
@@ -96,6 +97,8 @@ Not tested yet:
 - Images, logos and other non-text files in a Project (Project files come through as text).
 - Installing from GitHub inside the Claude app.
 - The email-triage example with a real Gmail or Outlook connector (tested only on a sample inbox).
+- Scheduled runs: whether a scheduled task finds a Project or folder home, and under what
+  conditions it fires (computer awake, app open).
 
 ## For contributors
 

@@ -35,7 +35,8 @@ can't be done:
 
 **Project home:** Project files can be read as text but not run in place. Recreate the
 playbook's folder layout in your workspace (the script plus every file it reads, at the
-same relative paths), run it there, and use the saved version unchanged. If the Project
+same relative paths, including anything it reads from `<home>/shared/`), run it there,
+and use the saved version unchanged. If the Project
 version changes later, copy it again before the next run.
 
 Either way:

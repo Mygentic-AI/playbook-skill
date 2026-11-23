@@ -27,6 +27,11 @@ What it shows:
 6. Any senders or kinds of email to never reply to?
 7. Can you show me a past reply you liked? (it becomes the approved example)
 8. How far back should the first run go, and is there a maximum number of emails per run?
+9. Is there any mail I should never open (banks, health, legal)? I'll file it by sender
+   and subject only.
+
+Before question 2, sample the last two weeks of the inbox read-only and show the user the
+senders grouped by kind: it is much easier to name VIPs and categories from a real list.
 
 In this example `references/people.md` replaces the generic template's `data.md`, and
 `state.md` holds the last-run date so it isn't buried in the corrections log.

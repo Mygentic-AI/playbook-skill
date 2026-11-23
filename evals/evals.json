@@ -25,6 +25,14 @@
       "files": [
         "evals/files/home-with-playbook/"
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "that run was right now. can you make it run on its own every monday at 8am?",
+      "expected_output": "Follows references/scheduling.md: adds a one-sentence Job line to PLAYBOOK.md if missing; creates a scheduled task with a stand-alone prompt naming the home, the playbook, what to do if the home or a connector is unreachable, and where the output goes (or says plainly that no scheduling tool is available and does not claim the job is automated); records the schedule in PLAYBOOKS.md as not yet verified; asks where the user already looks and who owns checking until when.",
+      "files": [
+        "evals/files/home-with-playbook/"
+      ]
     }
   ]
 }

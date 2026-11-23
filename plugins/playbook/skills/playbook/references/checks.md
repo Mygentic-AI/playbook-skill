@@ -52,6 +52,14 @@ not from your judgment.
 - Every score cites a line from the candidate's answer.
 - The summary contradicts nothing in the scorecard.
 
+## Test a new check in both directions
+
+Before trusting a check, run it twice: on an output with mistakes planted in it (it must
+fail, once per mistake) and on a known-good output (it must pass). The second test is the
+one people skip. A crude check, such as a banned-word list matched by substring, fails
+good output ("covers" inside "the revenue covers 8%"), and a check that cries wolf gets
+ignored or, worse, weakened. Keep both test files next to the script.
+
 ## On every run
 
 Run every check, fix failures, run again, then report pass or fail per check with its

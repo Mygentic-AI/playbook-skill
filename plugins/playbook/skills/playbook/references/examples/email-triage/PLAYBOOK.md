@@ -14,7 +14,8 @@ Purpose: sort everything new in [the user's inbox] and draft replies to what nee
 
 ## Steps
 1. Read references/rules.md. Note whether sending is on or off.
-2. Fetch every email received since the last run (or the last [24 hours] on the first run). Count them.
+2. Fetch every email received since a day before the last run (or the last [24 hours] on the first run).
+   Drop any id already listed under "Handled ids" in state.md. Count what's left.
 3. Put each email in exactly one category:
    - **Reply today**: needs the user's answer, from a VIP, or has a deadline within [2 days].
    - **Waiting on me**: needs the user, but not this week.
@@ -29,7 +30,7 @@ Purpose: sort everything new in [the user's inbox] and draft replies to what nee
 5. Write triage.json (format in scripts/check_triage.py) and run the checks.
 6. Give the summary: counts per category, then each "Reply today" email in one line with its draft.
 7. If sending is on: list the drafts and send only the ones the user approves in the chat, by number.
-8. Update state.md with this run's date and time.
+8. Update state.md: this run's date and time, and this run's ids at the top of "Handled ids".
 
 ## Decisions
 - If the sender is in people.md as a VIP, it's "Reply today", whatever the content.
@@ -44,7 +45,8 @@ Purpose: sort everything new in [the user's inbox] and draft replies to what nee
 - [ ] Every VIP email is in "Reply today": scripts/check_triage.py
 - [ ] Every "Reply today" email has a saved draft, and nothing flagged as phishing has one: scripts/check_triage.py
 - [ ] Nothing was sent unless sending is on AND the user approved it in this chat: scripts/check_triage.py
-- [ ] No archive, label or delete action was taken this run: list the inbox actions you took. (Self-reported: say so in the check report.)
+- [ ] No label, move, archive or delete action above what rules.md allows: scripts/check_triage.py (from what you record in triage.json, so self-reported: say so in the check report)
+- [ ] No email from a "Never read" sender in rules.md was opened: list them by sender and subject only
 - [ ] Every draft quotes or names the question it answers
 - [ ] Every draft follows references/rules.md (length, tone, banned phrases)
 

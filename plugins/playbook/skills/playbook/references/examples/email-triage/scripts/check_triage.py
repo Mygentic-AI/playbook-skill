@@ -9,11 +9,14 @@ triage.json, written by Claude during the run:
   "fetched_ids": ["id1", "id2", ...],
   "items": [
     {"id": "id1", "from": "a@b.com", "category": "reply today", "flags": [],
-     "drafted": true, "sent": false, "approved_in_chat": false}
+     "drafted": true, "sent": false, "approved_in_chat": false,
+     "labelled": false, "moved": false, "deleted": false}
   ]
 }
 
 Possible phishing goes in "fyi" with "possible phishing" in flags.
+What may be done in the inbox (Label, Move or archive) is read from ../references/rules.md:
+a rung counts as allowed only if its line starts with "yes". Deleting is never allowed.
 VIPs are read from ../references/people.md (any address or @domain in the "VIPs" section),
 found relative to this script so it works in a local folder or recreated from a Project.
 Exits 1 if any check fails.
@@ -26,6 +29,13 @@ from pathlib import Path
 
 CATEGORIES = {"reply today", "waiting on me", "someone else", "fyi", "newsletters and receipts"}
 PEOPLE = Path(__file__).resolve().parent.parent / "references" / "people.md"
+RULES = Path(__file__).resolve().parent.parent / "references" / "rules.md"
+
+
+def allowed(rung: str) -> bool:
+    """True only if rules.md has a line like '- Label: yes ...'."""
+    m = re.search(rf"^-\s*{re.escape(rung)}:\s*(.*)$", RULES.read_text(), re.M | re.I)
+    return bool(m) and m.group(1).strip().strip("*").lower().startswith("yes")
 
 
 def vip_patterns() -> list[str]:
@@ -84,6 +94,15 @@ def main() -> int:
     print(f"No unapproved sends: {'FAIL ' + str(bad_sends) if bad_sends else 'PASS'}")
     if bad_sends:
         failures.append(f"sent without approval: {bad_sends}")
+
+    over = []
+    for field, rung in (("labelled", "Label"), ("moved", "Move or archive")):
+        if not allowed(rung):
+            over += [f"{i['id']}:{field}" for i in items if i.get(field)]
+    over += [f"{i['id']}:deleted" for i in items if i.get("deleted")]
+    print(f"No inbox actions beyond rules.md: {'FAIL ' + str(over) if over else 'PASS'}")
+    if over:
+        failures.append(f"inbox actions not allowed: {over}")
 
     return 1 if failures else 0
 

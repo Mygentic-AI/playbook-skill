@@ -118,7 +118,12 @@ If they go blank, offer examples, starting with the one most people want:
 3. Ask the two after-run questions. Apply the first correction with
    `references/corrections.md`, so they see the playbook change.
 
-## 8. Close with the words to use next time
+## 8. Offer to close the loop
+
+Once the first correction is in, ask whether the job should run on its own. If yes,
+follow `references/scheduling.md`. If not now, say it's available and move on.
+
+## 9. Close with the words to use next time
 
 > Next time, just say "do my <job name>". If I get something wrong, tell me and I'll fix
 > the playbook. To see everything you've set up, ask "what playbooks do I have?"
