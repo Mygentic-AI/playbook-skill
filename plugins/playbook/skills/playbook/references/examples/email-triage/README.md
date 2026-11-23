@@ -27,7 +27,9 @@ What it shows:
 6. Any senders or kinds of email to never reply to?
 7. Can you show me a past reply you liked? (it becomes the approved example)
 8. How far back should the first run go, and is there a maximum number of emails per run?
-9. Is there any mail I should never open (banks, health, legal)? I'll file it by sender
+9. Shall I label each email with its category in your inbox? (Off unless they say yes;
+   if yes, set "Label: yes" with today's date in rules.md.)
+10. Is there any mail I should never open (banks, health, legal)? I'll file it by sender
    and subject only.
 
 Before question 2, sample the last two weeks of the inbox read-only and show the user the

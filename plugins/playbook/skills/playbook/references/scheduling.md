@@ -64,7 +64,8 @@ there.
   left in their inbox with a label lands where they already are.
 - **Things that need action belong where action happens.** For email, that can mean
   leaving them in the inbox with a label and filing the rest, but only if the user has
-  turned on the label and move rungs in `rules.md`. With the default read-and-draft
+  agreed to the label and move rungs in `rules.md`. If they haven't, offer labelling
+  once (it puts the sorting where they already look) and turn it on only if they agree. With the default read-and-draft
   access, send the summary to the place instead and touch nothing in the inbox.
 - **Keep a full record too,** in the home (for example `reports/YYYY-MM-DD.md`), newest
   run at the top. Remove old records after a period the user picks.

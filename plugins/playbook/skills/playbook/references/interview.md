@@ -33,7 +33,9 @@ ladder and write each rung into `rules.md` with the date it was turned on:
 5. send, post or delete
 
 Start at the lowest rung the job needs. Each higher rung is turned on only when the user
-asks for it, never assumed from the job description, and the check script verifies that
+agrees to it, never assumed from the job description. Do offer a rung that would clearly
+help, and say what it does. For email, offer labelling: "I can also label each email with
+its category, so you see the sorting in your inbox. Want that?" Turn it on only on a yes, and the check script verifies that
 no action above the agreed rung was taken. For email, sending stays off unless the user
 turns it on, and then only for drafts they approve in the chat. Never set up automatic
 sending.

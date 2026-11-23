@@ -117,7 +117,7 @@ Gmail or Outlook connector switched on. In a Project or with your Playbooks fold
 Make me an email triage playbook.
 ```
 
-✅ Says it's starting from the example template; asks about your VIPs, categories and what
+✅ Says it's starting from the example template; asks about your VIPs, categories, whether to label emails, and what
 it may do in the inbox, one question at a time; the files it writes have no "EXAMPLE
 TEMPLATE" banner and no [brackets] left; sending is off unless you said otherwise.
 
