@@ -123,10 +123,11 @@ a yes; it may hold other people's messages.
   schedule it, send the output where the user already looks, and name an owner
   (`references/scheduling.md`).
 - **Ask, but make bold, helpful suggestions.** A skill that only offers the safest option
-  is useless. When something would clearly help (a summary email, labelling, a schedule),
-  recommend it plainly with the reason ("I'd like to ... so you ... Shall I?"), not as
-  a hedged option buried in warnings. Then act on the yes. Keep warnings for real risks,
-  and know what each safeguard is for: "don't send" protects other people from replies
-  the user didn't mean, not the user from a summary in their own inbox.
+  is useless. When something would clearly help (a schedule, a summary sent to the user,
+  tagging or filing), recommend it plainly with the reason ("I'd like to ... so you ...
+  Shall I?"), not as a hedged option buried in warnings. Then act on the yes. Keep
+  warnings for real risks, and know what each safeguard is for: keeping sending off
+  protects other people from what the user didn't mean to put out, not the user from a
+  summary of their own work.
 - **The user's words beat your draft.** You write the files, but every rule comes from
   the user. When unsure, ask rather than invent a rule.

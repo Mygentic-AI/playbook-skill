@@ -23,23 +23,26 @@ Remove the EXAMPLE TEMPLATE banner from the files you write for them. Where the 
 files differ from the generic template (e.g. `people.md` instead of `data.md`), use the
 example's and drop the generic file, so there's one file per purpose.
 
-For anything that touches an account (an inbox, a drive, a CRM), agree permissions as a
-ladder and write each rung into `rules.md` with the date it was turned on:
+For anything that touches an account (an inbox, a drive, a CRM, a calendar), agree what
+Claude may do there and write each permission into `rules.md` with the date it was
+agreed. Typical steps, from least to most reach:
 
 1. read
-2. label or tag
-3. move or archive
+2. tag or label
+3. move, file or archive
 4. draft
-5. send, post or delete
+5. send, post, share or delete
 
-Start at the lowest rung the job needs. Each higher rung is turned on only when the user
-agrees to it, never assumed from the job description. Recommend the rungs that would
-clearly help, plainly and with the reason, as a recommendation rather than a timid
-option. For email: "I recommend letting me label each email with its category, so the
-sorting shows up in your inbox. Shall I?" Turn it on only on a yes, and the check script verifies that
-no action above the agreed rung was taken. For email, sending to other people stays off unless the user
-turns it on, and then only for drafts they approve in the chat. Never set up automatic
-sending to other people. A summary emailed to the user's own address is a different thing: recommend it.
+Start with what the job needs. Anything more is done only once the user agrees, never
+assumed from the job description. Recommend the steps that would clearly help, plainly
+and with the reason ("I'd like to tag each one by client so you can see them at a
+glance. Shall I?"), then act on the yes. Add a check that nothing beyond the agreed
+permissions was done.
+
+Know what each limit is for. Keeping send, post and share off protects other people from
+something the user didn't mean to put out; never set those up to happen automatically.
+Delivering the result to the user themselves (a note to their own inbox, a message in
+their own channel) carries no such risk: recommend it.
 
 ## Look at the data before you ask about it
 

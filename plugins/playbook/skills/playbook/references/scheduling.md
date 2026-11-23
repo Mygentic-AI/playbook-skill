@@ -62,14 +62,14 @@ there.
 - **Prefer the place over a new doc.** A report in a Project doc is a new place the user
   has to remember. An email to themselves, a message in the channel they read, or the item
   left in their inbox with a label lands where they already are.
-- **Deliver where it gets read.** A playbook that keeps its output where nobody looks is
-  useless; don't settle for a timid option. For email, recommend a short summary emailed
-  to the user's own address after each run: "I'd like to email you a summary after each
-  run. Shall I?" Don't dress it up as risky sending: "no sending" exists so replies the
-  user didn't mean never reach other people, and mail to themselves can't do that.
-- **Recommend labelling plainly.** "**I recommend letting me label each email with its
-  category, so the sorting shows up in your inbox. Shall I?**" Labels and moves change
-  the inbox, so do them only once `rules.md` says yes.
+- **Deliver where it gets read.** A playbook whose output sits where nobody looks is
+  useless; don't settle for a timid option. Recommend the delivery that works, plainly:
+  "I'd like to send you a short summary after each run, so you see what needs you
+  without opening anything else. Shall I?" Delivering to the user themselves is not the
+  risky kind of sending; that's anything reaching other people.
+- **Actions in the user's accounts follow `rules.md`.** If tagging, filing or similar
+  would put the result where they already look, recommend it and do it once they agree.
+  The email-triage example shows this for an inbox.
 - **Keep a full record too,** in the home (for example `reports/YYYY-MM-DD.md`), newest
   run at the top. Remove old records after a period the user picks.
 - **Notification text leads with what needs the user,** then the counts, then the path.
