@@ -13,7 +13,7 @@ Purpose: sort everything new in [the user's inbox] and draft replies to what nee
 - references/rules.md: what may and may not be done in the inbox.
 
 ## Steps
-1. Read references/rules.md. Note whether sending is on or off.
+1. Read references/rules.md. Note whether sending to other people is on or off.
 2. Fetch every email received since a day before the last run (or the last [24 hours] on the first run).
    Drop any id already listed under "Handled ids" in state.md. Count what's left.
 3. Put each email in exactly one category:
@@ -28,7 +28,8 @@ Purpose: sort everything new in [the user's inbox] and draft replies to what nee
 4. Draft a reply for every "Reply today" email (except anything flagged as possible phishing), using assets/reply-templates.md and the tone in rules.md.
    Save drafts as drafts in the mail app. Do not send.
 5. Write triage.json (format in scripts/check_triage.py) and run the checks.
-6. Give the summary: counts per category, then each "Reply today" email in one line with its draft.
+6. Give the summary: what needs the user first, then counts per category, then each "Reply today" email
+   in one line with its draft. Email it to the user's own address (rules.md), unless they turned that off.
 7. If sending is on: list the drafts and send only the ones the user approves in the chat, by number.
 8. Update state.md: this run's date and time, and this run's ids at the top of "Handled ids".
 
@@ -44,7 +45,8 @@ Purpose: sort everything new in [the user's inbox] and draft replies to what nee
 - [ ] Every fetched email is in exactly one category: scripts/check_triage.py
 - [ ] Every VIP email is in "Reply today": scripts/check_triage.py
 - [ ] Every "Reply today" email has a saved draft, and nothing flagged as phishing has one: scripts/check_triage.py
-- [ ] Nothing was sent unless sending is on AND the user approved it in this chat: scripts/check_triage.py
+- [ ] Nothing was sent to anyone but the user unless sending is on AND the user approved it in this chat: scripts/check_triage.py
+- [ ] The summary email went to the user's own address and nowhere else
 - [ ] No label, move, archive or delete action above what rules.md allows: scripts/check_triage.py (from what you record in triage.json, so self-reported: say so in the check report)
 - [ ] No email from a "Never read" sender in rules.md was opened: list them by sender and subject only
 - [ ] Every draft quotes or names the question it answers

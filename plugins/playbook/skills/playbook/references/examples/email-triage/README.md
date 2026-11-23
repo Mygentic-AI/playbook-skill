@@ -36,10 +36,9 @@ a real list.
 9. Recommend labelling: "I recommend letting me label each email with its category, so
    the sorting shows up in your inbox. Shall I?" Only a yes turns it on ("Label: yes"
    with today's date in rules.md).
-10. Recommend a summary email: "I recommend I email you a short summary after each run,
-   so you see what needs you without opening anything else. That counts as sending, so I
-   need your yes." Only a yes turns it on ("Email me a summary of each run: yes" with
-   the date).
+10. Tell them, don't ask: "After each run I'll email you a short summary at [their
+   address], so you see what needs you without opening anything else. Say if you'd
+   rather not." It goes to their own address only.
 
 In this example `references/people.md` replaces the generic template's `data.md`, and
 `state.md` holds the last-run date so it isn't buried in the corrections log.

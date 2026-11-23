@@ -62,17 +62,15 @@ there.
 - **Prefer the place over a new doc.** A report in a Project doc is a new place the user
   has to remember. An email to themselves, a message in the channel they read, or the item
   left in their inbox with a label lands where they already are.
-- **Recommend the delivery that works, then ask.** A playbook that keeps its output where
-  nobody looks is useless, so don't settle for a timid option to stay inside the
-  mandate. Say clearly what you recommend and why, and that it needs their yes. For
-  email, usually: "**I recommend I email you a short summary after each run and label
-  each email with its category, so everything shows up in your inbox. Emailing you
-  counts as sending and labelling changes your inbox, so I need your yes for each.**"
-- **Emailing the user is sending.** Even to themselves it needs its own yes, recorded with
-  the date in `rules.md`. Until then, deliver without sending (a draft addressed to them,
-  the scheduled task's own notification, or the record in the home) and say that the
-  summary email is waiting on their yes.
-- **Labels and moves need a yes too.** Only do them if `rules.md` says yes.
+- **Deliver where it gets read.** A playbook that keeps its output where nobody looks is
+  useless; don't settle for a timid option. For email, the default is a short summary
+  emailed to the user's own address after each run. That isn't the sending the rules
+  guard against: "no sending" exists so replies the user didn't mean never reach other
+  people. Mail to themselves can't do that. Tell them it's coming and that they can
+  turn it off.
+- **Recommend labelling plainly.** "**I recommend letting me label each email with its
+  category, so the sorting shows up in your inbox. Shall I?**" Labels and moves change
+  the inbox, so do them only once `rules.md` says yes.
 - **Keep a full record too,** in the home (for example `reports/YYYY-MM-DD.md`), newest
   run at the top. Remove old records after a period the user picks.
 - **Notification text leads with what needs the user,** then the counts, then the path.

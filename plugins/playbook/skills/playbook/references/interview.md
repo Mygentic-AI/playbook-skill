@@ -37,9 +37,9 @@ agrees to it, never assumed from the job description. Recommend the rungs that w
 clearly help, plainly and with the reason, as a recommendation rather than a timid
 option. For email: "I recommend letting me label each email with its category, so the
 sorting shows up in your inbox. Shall I?" Turn it on only on a yes, and the check script verifies that
-no action above the agreed rung was taken. For email, sending stays off unless the user
+no action above the agreed rung was taken. For email, sending to other people stays off unless the user
 turns it on, and then only for drafts they approve in the chat. Never set up automatic
-sending.
+sending to other people. A summary emailed to the user's own address is fine by default.
 
 ## Look at the data before you ask about it
 
