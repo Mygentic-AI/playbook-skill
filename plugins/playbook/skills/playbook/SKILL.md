@@ -33,7 +33,12 @@ Work out which one you have from what you can actually do, not from tool names:
 4. **Neither, and the user wants to run or fix a playbook** → stop and say what is
    missing in one or two plain sentences, for example: "I can't see your playbooks in
    this chat. Connect your Playbooks folder, or open the Project they live in and ask
-   again." Do not carry on: anything you write would vanish when the chat ends.
+   again." Do not carry on: anything you write would vanish when the chat ends. If they
+   need a new chat for it, give them a one-block message to paste there that repeats
+   their request (e.g. "Do my weekly client update for ACME Group").
+
+Whenever you send the user to a new chat, for any reason, give them the message to paste
+as its first message, in one copy-paste block. The new chat remembers nothing of this one.
 
 Never ask for a broad folder such as Documents, Desktop or the home folder. Connecting
 a folder exposes everything in it to the chat. Ask for the Playbooks folder by name.

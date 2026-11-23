@@ -8,9 +8,10 @@ Expect about half an hour, and ask the user to have a real piece of this work at
 ## 0. Coming back after creating the container
 
 If this chat is already inside a Project, or an empty Playbooks folder is connected, the
-user has probably just done step 3. Confirm what you can see ("I can see this Project's
-files" / "I can see your Playbooks folder"), check it matches the storage choice, and go
-straight to step 4. Don't repeat the explanation or the questions.
+user has probably just done step 3, usually by pasting a kickoff message. Confirm what you
+can see ("I can see this Project's files" / "I can see your Playbooks folder"), check it
+matches the storage choice, and go straight to step 4. Use everything the kickoff message
+already settled (first job, answers given). Don't repeat the explanation or the questions.
 
 ## 1. Explain in three lines
 
@@ -44,13 +45,36 @@ only one that gives both. Say so.
 ## 3. The user creates the container; you can't
 
 You cannot create a Claude Project, and you cannot create a folder outside a folder that
-is already connected. Give the exact step and wait:
+is already connected. Most people start this skill in an ordinary chat with neither, so
+this step usually means moving to a new chat. Do it right after the storage question,
+before the interview, so as little as possible is lost in the move.
 
-- **Computer:** "In Finder (or File Explorer), create an empty folder called Playbooks in
-  your home folder, then connect just that folder to this chat. Please don't connect
-  Documents or your whole home folder: I'd be able to see everything in it."
-- **Project:** "Create a Project in the Claude app for this work (or open the one it
-  belongs to), start a new chat inside it, and say 'set up my playbooks' again."
+Give the exact steps, numbered:
+
+- **Computer:** "1. In Finder (or File Explorer), create an empty folder called Playbooks
+  in your home folder. 2. Start a new chat and connect just that folder. Please don't
+  connect Documents or your whole home folder: I'd be able to see everything in it.
+  3. Paste the message below as your first message." (If the folder can be connected to
+  this chat instead, that's fine too: carry on here and skip the kickoff message.)
+- **Project:** "1. Create a Project in the Claude app for this work (or open the one it
+  belongs to). 2. Start a new chat inside it. 3. Paste the message below as your first
+  message."
+
+**Always end with a kickoff message to paste into the new chat.** The new chat starts
+with no memory of this one, so the message carries everything already settled. Put it in
+a single copy-paste block, written in the user's voice, for example:
+
+```
+Set up my playbooks. I've already chosen where they live: in this Project (I want to use
+them on my phone too). This Project is new and empty. My first job is triaging my email
+every weekday morning. Skip the explanation and the storage question, check you can save
+here, then start the interview.
+```
+
+Include: the storage choice and why, what the container is (new and empty, or an existing
+Project with work in it), the first job if one was mentioned, and any answers already
+given. Leave out anything the user didn't say. Then stop: don't start the interview in
+a chat that can't save it.
 
 ## 4. Prove you can write there before going on
 

@@ -23,8 +23,14 @@ New chat outside any Project, no folder connected:
 Set up my playbooks.
 ```
 
-✅ Asks the storage question, then tells you to create the Project or folder yourself,
-and does not write a playbook anywhere.
+✅ Asks the storage question, then gives numbered steps to create the Project or folder
+yourself, ends with a kickoff message in one copy-paste block for the new chat, and does
+not write a playbook anywhere.
+
+Paste that kickoff message into a new chat in the Project (or with the folder connected).
+
+✅ It does not repeat the explanation or the storage question; it checks it can save and
+starts the interview.
 
 ```
 Do my weekly client update.
