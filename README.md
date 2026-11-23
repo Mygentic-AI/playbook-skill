@@ -61,9 +61,22 @@ playbook you need in several Projects is copied into each; the skill helps with 
 | "make a playbook for my invoice chasing" | interview, then a new playbook |
 | "do my weekly client update" | runs that playbook, checks it, reports pass/fail |
 | "what playbooks do I have?" | lists them |
+| "make me an email triage playbook" | starts from the bundled example template |
 
 After every run, Claude asks whether anything was wrong and whether to keep anything as a
 template, example or script. Answer in plain words; it updates the playbook.
+
+## Example template: email triage
+
+The skill ships with one worked **example template**: email triage (sort new email,
+draft replies to what needs one today). It's a model Claude starts the interview from, not
+a playbook that runs as-is: your VIPs, categories and limits replace every placeholder.
+See [`references/examples/email-triage/`](plugins/playbook/skills/playbook/references/examples/email-triage/).
+
+- Needs an email connector (Gmail or Outlook) switched on in the Claude app.
+- **Default: read and draft only.** Claude never sends, labels, archives or deletes.
+- You can turn sending on during setup. Even then, Claude only sends drafts you approve
+  by number in the chat. There is no automatic sending.
 
 ## What's been tested
 
@@ -82,6 +95,7 @@ Not tested yet:
 - The skill triggering inside a Project on the phone.
 - Images, logos and other non-text files in a Project (Project files come through as text).
 - Installing from GitHub inside the Claude app.
+- The email-triage example with a real Gmail or Outlook connector (tested only on a sample inbox).
 
 ## For contributors
 

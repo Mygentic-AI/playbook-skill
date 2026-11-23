@@ -1,6 +1,6 @@
 {
   "name": "playbook",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Build and run playbooks: one folder per recurring job (steps, scripts, references, checks, corrections log), kept on your computer or in a Claude Project.",
   "author": {
     "name": "Mygentic-AI"

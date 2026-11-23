@@ -53,6 +53,7 @@ doing playbook work.
 | "add checks", or a playbook has none that can fail | `references/checks.md` |
 | "what playbooks do I have?" | read `PLAYBOOKS.md` and list name + when to use |
 | "use this playbook in my other Project too" | `references/sharing.md` |
+| wants an email-triage playbook and has none yet | `references/interview.md`, starting from `references/examples/email-triage/` |
 
 ## Layout of a home
 
@@ -69,9 +70,15 @@ doing playbook work.
 ```
 
 Starting files are in `assets/playbook-template/` and `assets/PLAYBOOKS.md`. In a local
-home you can copy them with `scripts/new_playbook.py <home> <job-name>`. In a Project
+home you can copy the playbook folder with `scripts/new_playbook.py <home> <job-name>`
+(write `PLAYBOOKS.md` yourself during setup; the script doesn't touch it). In a Project
 home there is no copy command: write each file into the Project one by one, using the
 template text.
+
+`references/examples/` holds **example templates**, starting with email triage. They are
+models to start an interview from, never a user's playbook: don't run them, don't list
+them as the user's playbooks, and don't copy them into a home unchanged. Tell the user
+when you're starting from one.
 
 `PLAYBOOK.md` is deliberately not called `SKILL.md`. Playbooks are data this skill reads,
 not separate skills, and the name keeps them from being mistaken for one.

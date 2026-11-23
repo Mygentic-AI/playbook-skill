@@ -3,8 +3,8 @@
 
 Usage: python3 new_playbook.py <home> <job-name>
 
-Copies assets/playbook-template/ to <home>/playbooks/<job-name>/ and creates
-<home>/PLAYBOOKS.md from assets/PLAYBOOKS.md if it doesn't exist yet.
+Copies assets/playbook-template/ to <home>/playbooks/<job-name>/.
+PLAYBOOKS.md is written during setup, not by this script; add the new entry to it yourself.
 Local homes only: in a Claude Project, write the template files one by one.
 """
 
@@ -15,7 +15,6 @@ from pathlib import Path
 
 SKILL_DIR = Path(__file__).resolve().parent.parent
 TEMPLATE = SKILL_DIR / "assets" / "playbook-template"
-INDEX_TEMPLATE = SKILL_DIR / "assets" / "PLAYBOOKS.md"
 
 
 def main() -> int:
@@ -41,10 +40,10 @@ def main() -> int:
     shutil.copytree(TEMPLATE, target)
     print(f"Created {target}")
 
-    index = home / "PLAYBOOKS.md"
-    if not index.exists():
-        shutil.copyfile(INDEX_TEMPLATE, index)
-        print(f"Created {index}")
+    if not (home / "PLAYBOOKS.md").exists():
+        print("Note: no PLAYBOOKS.md in this home yet. Write it (setup step 4) and add this playbook.")
+    else:
+        print("Remember to add this playbook's entry to PLAYBOOKS.md.")
 
     return 0
 

@@ -102,3 +102,24 @@ I need this playbook in my other Project too.
 ```
 
 ✅ Adds an Origin line, gives you the files to add there, flags client-specific details.
+
+## I. Email triage from the example template
+
+Gmail or Outlook connector switched on. In a Project or with your Playbooks folder connected:
+
+```
+Make me an email triage playbook.
+```
+
+✅ Says it's starting from the example template; asks about your VIPs, categories and what
+it may do in the inbox, one question at a time; the files it writes have no "EXAMPLE
+TEMPLATE" banner and no [brackets] left; sending is off unless you said otherwise.
+
+Then:
+
+```
+Triage my email.
+```
+
+✅ Every new email in one category, drafts saved as drafts, check report shows sorted-once,
+VIPs and no-send as PASS, and nothing was sent, labelled, archived or deleted.

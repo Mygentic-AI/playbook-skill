@@ -23,6 +23,13 @@ not from your judgment.
 
 ## Examples
 
+**Email triage** (full example template in `references/examples/email-triage/`)
+- Every fetched email is in exactly one category (`scripts/check_triage.py`).
+- Every email from a VIP in `references/people.md` is in "reply today".
+- Nothing was sent unless sending is on and the user approved that draft in the chat.
+- Nothing was archived, labelled or deleted.
+- Every draft quotes or names the question it answers.
+
 **Weekly client update**
 - Every figure appears in the pulled data file.
 - No adjective without a number next to it.

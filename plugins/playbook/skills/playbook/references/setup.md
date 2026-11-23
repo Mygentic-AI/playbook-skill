@@ -79,9 +79,13 @@ Suggest the job the user does most often, not the most complicated one. A good f
 - they would recognise a bad version instantly,
 - they could explain to a new hire in under 20 minutes.
 
-If they go blank, offer examples: a weekly client or team update, chasing late invoices,
-turning a video or call into social posts, a recurring report, screening applicants,
-answering a common type of email.
+If they go blank, offer examples, starting with the one most people want:
+
+- **Email triage**: sort new email and draft replies to what needs one today. There's a
+  worked example template for this (`references/examples/email-triage/`); it needs an
+  email connector switched on.
+- A weekly client or team update, chasing late invoices, turning a video or call into
+  social posts, a recurring report, screening applicants.
 
 ## 7. Interview, write, run
 

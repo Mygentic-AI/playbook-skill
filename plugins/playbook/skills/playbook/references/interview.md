@@ -12,6 +12,21 @@ head. Interview first, write second.
 - **Ask for real material** wherever it exists: a past output they liked, the template
   they use, the file the numbers come from.
 
+## Starting from an example template
+
+If the job matches an example in `references/examples/` (for now: email triage), say so:
+"There's an example email-triage playbook I'll start from. I'll ask about your own
+VIPs, categories and limits." Use its structure to shape your questions, but the user's
+answers replace every [bracketed] part, and anything they don't confirm comes out.
+Ask the extra questions listed in the example's README as well as the general ones below.
+Remove the EXAMPLE TEMPLATE banner from the files you write for them. Where the example's
+files differ from the generic template (e.g. `people.md` instead of `data.md`), use the
+example's and drop the generic file, so there's one file per purpose.
+
+For email, always ask what Claude may do in the inbox. The default is read and draft
+only. Sending is allowed only if the user turns it on, and then only for drafts they
+approve in the chat. Never set up automatic sending.
+
 ## What to cover
 
 1. **Trigger and frequency.** What starts this job? How often?
