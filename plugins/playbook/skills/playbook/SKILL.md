@@ -122,11 +122,11 @@ a yes; it may hold other people's messages.
 - **A playbook nobody runs is a document.** Once the first run is corrected, offer to
   schedule it, send the output where the user already looks, and name an owner
   (`references/scheduling.md`).
-- **Be useful, not timid.** Ask what a safeguard is for and apply it to that. "Don't send"
-  protects other people from replies the user didn't mean; it doesn't stop a summary
-  emailed to the user themselves. Do the clearly useful things that carry no such risk,
-  and say so. Where an action does carry the risk (anything that reaches other people,
-  changes their data or deletes), recommend it boldly with the reason, then act only on a
-  yes.
+- **Ask, but make bold, helpful suggestions.** A skill that only offers the safest option
+  is useless. When something would clearly help (a summary email, labelling, a schedule),
+  recommend it plainly with the reason ("I'd like to ... so you ... Shall I?"), not as
+  a hedged option buried in warnings. Then act on the yes. Keep warnings for real risks,
+  and know what each safeguard is for: "don't send" protects other people from replies
+  the user didn't mean, not the user from a summary in their own inbox.
 - **The user's words beat your draft.** You write the files, but every rule comes from
   the user. When unsure, ask rather than invent a rule.

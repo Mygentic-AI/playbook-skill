@@ -29,7 +29,7 @@ Purpose: sort everything new in [the user's inbox] and draft replies to what nee
    Save drafts as drafts in the mail app. Do not send.
 5. Write triage.json (format in scripts/check_triage.py) and run the checks.
 6. Give the summary: what needs the user first, then counts per category, then each "Reply today" email
-   in one line with its draft. Email it to the user's own address (rules.md), unless they turned that off.
+   in one line with its draft. Email it to the user's own address if rules.md says yes.
 7. If sending is on: list the drafts and send only the ones the user approves in the chat, by number.
 8. Update state.md: this run's date and time, and this run's ids at the top of "Handled ids".
 

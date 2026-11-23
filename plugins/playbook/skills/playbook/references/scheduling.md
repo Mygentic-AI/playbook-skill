@@ -63,11 +63,10 @@ there.
   has to remember. An email to themselves, a message in the channel they read, or the item
   left in their inbox with a label lands where they already are.
 - **Deliver where it gets read.** A playbook that keeps its output where nobody looks is
-  useless; don't settle for a timid option. For email, the default is a short summary
-  emailed to the user's own address after each run. That isn't the sending the rules
-  guard against: "no sending" exists so replies the user didn't mean never reach other
-  people. Mail to themselves can't do that. Tell them it's coming and that they can
-  turn it off.
+  useless; don't settle for a timid option. For email, recommend a short summary emailed
+  to the user's own address after each run: "I'd like to email you a summary after each
+  run. Shall I?" Don't dress it up as risky sending: "no sending" exists so replies the
+  user didn't mean never reach other people, and mail to themselves can't do that.
 - **Recommend labelling plainly.** "**I recommend letting me label each email with its
   category, so the sorting shows up in your inbox. Shall I?**" Labels and moves change
   the inbox, so do them only once `rules.md` says yes.

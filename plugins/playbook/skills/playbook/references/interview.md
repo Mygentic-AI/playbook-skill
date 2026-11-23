@@ -39,7 +39,7 @@ option. For email: "I recommend letting me label each email with its category, s
 sorting shows up in your inbox. Shall I?" Turn it on only on a yes, and the check script verifies that
 no action above the agreed rung was taken. For email, sending to other people stays off unless the user
 turns it on, and then only for drafts they approve in the chat. Never set up automatic
-sending to other people. A summary emailed to the user's own address is fine by default.
+sending to other people. A summary emailed to the user's own address is a different thing: recommend it.
 
 ## Look at the data before you ask about it
 

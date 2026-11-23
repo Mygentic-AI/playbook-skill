@@ -118,8 +118,8 @@ Make me an email triage playbook.
 ```
 
 ✅ Says it's starting from the example template; first asks what mail it must never open,
-before reading anything; recommends labelling and turns it on only with your yes; tells you
-it will email the run summary to your own address (no permission dance); asks about your VIPs, categories and what
+before reading anything; boldly recommends labelling and a summary email to your own
+address (no warnings about sending) and does each only after your yes; asks about your VIPs, categories and what
 it may do in the inbox, one question at a time; the files it writes have no "EXAMPLE
 TEMPLATE" banner and no [brackets] left; sending is off unless you said otherwise.
 
