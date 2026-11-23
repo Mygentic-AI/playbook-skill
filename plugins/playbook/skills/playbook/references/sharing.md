@@ -1,5 +1,27 @@
 # Using a playbook in more than one place
 
+## Same job, many clients
+
+Many users do the same job for many clients or entities: an HR consultancy's first
+outreach to each new client, a bookkeeper's month-end close, an agency's weekly report.
+The method is the same; the details differ. Set it up like this:
+
+1. **One master playbook** holds the method: steps, decisions, checks, scripts and
+   templates that apply to every client, with no client names or data in it. Keep it in a
+   home of its own (a "Templates" Project, or the local Playbooks folder).
+2. **A copy in each client's Project.** Each client gets its own Project, so its files,
+   chats and data stay separate. Copy the master in (below) and customise the copy: the
+   client's contacts, rules, tone, examples and anything else that's theirs.
+3. **When you correct a client's copy, ask one question:** "Is this fix for this client
+   only, or for every client?"
+   - **This client only** (their name, their deadline, their preferences): fix the copy.
+   - **Every client** (a better step, a missing check, a clearer template): fix the copy,
+     then give the user the change to apply to the master, and list the other client
+     Projects that should get it too. You can't reach other Projects yourself.
+4. **New client:** copy the current master, not another client's copy, so nothing from one
+   client leaks into another.
+
+
 A chat can only see its own Project, and a computer home is only visible where its folder
 is connected. So a playbook needed in two Projects (for example the same client update for
 two clients) lives as one full copy in each.

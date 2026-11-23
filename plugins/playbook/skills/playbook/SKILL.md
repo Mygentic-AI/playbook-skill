@@ -62,7 +62,7 @@ doing playbook work.
 | "add checks", or a playbook has none that can fail | `references/checks.md` |
 | reviewing a run's output before handing it over | `references/review.md` |
 | "what playbooks do I have?" | read `PLAYBOOKS.md` and list name, when to use, and the phrases to ask with |
-| "use this playbook in my other Project too" | `references/sharing.md` |
+| "use this playbook in my other Project too", "set this up for a new client", the same job for many clients | `references/sharing.md` |
 | "run this every morning", "automate it", or a playbook's first corrected run is done | `references/scheduling.md` |
 | wants an email-triage playbook and has none yet | `references/interview.md`, starting from `references/examples/email-triage/` |
 

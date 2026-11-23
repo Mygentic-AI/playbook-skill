@@ -93,6 +93,15 @@ playbook you need in several Projects is copied into each; the skill helps with 
 After every run, Claude asks whether anything was wrong and whether to keep anything as a
 template, example or script. Answer in plain words; it updates the playbook.
 
+## Same job, many clients
+
+If you do the same job for many clients, like a consultancy's first outreach or a monthly
+report, keep one master playbook with the method and give each client its own Project with a
+copy. Customise each copy with that client's details. When you correct a copy, Claude asks
+whether the fix is for that client only or for every client, and gives you the change to
+apply to the master and the other copies. New clients start from the master, so nothing
+leaks from one client to another.
+
 ## Example template: email triage
 
 The skill ships with one worked **example template**: email triage (sort new email,

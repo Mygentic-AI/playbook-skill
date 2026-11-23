@@ -26,6 +26,10 @@ Fix both. When adding a check, follow `references/checks.md`.
 
 ## 2. Make the smallest fix that lasts
 
+**Copied playbooks:** if this playbook has an "Origin" line or is one of several client
+copies, ask whether the fix is for this client only or for every client
+(`references/sharing.md`).
+
 **Test the fix against the intent.** A fix should make the playbook serve its intent
 better, not just silence this one complaint. If the fix you're about to make would work
 against the intent (for example, a rule that hides more mail when the intent is not to
