@@ -1,29 +1,36 @@
 # Playbook
 
-A skill for the Claude app that turns the work you repeat into **playbooks**: one folder
-per job, holding the steps, the tools that worked, checks that can fail, and a log of every
-correction. When Claude gets something wrong, it fixes the playbook, not just the answer,
-so the next run starts better.
+A skill for the Claude app that turns the work you repeat into **playbooks**: one folder per
+job, holding the steps, the tools that worked, checks that can fail, a log of every
+correction, and the job's memory of what earlier runs handled. After every run a fresh
+reviewer looks over the output, and when Claude gets something wrong it fixes the playbook,
+not just the answer, so the next run starts better.
 
 ## Why not just a skill?
 
-A skill can hold steps, scripts, references and templates too, and you can write your own or copy
-one and change it. The difference is who keeps it up to date.
+A skill can hold steps, scripts, references and templates too, and you can write your own or
+copy one and change it. So what does a playbook add?
 
-- **A skill changes only when you approve it.** In the Claude app, every edit to a skill goes
-  through you on a review card. That's right for something settled, but the small corrections a
-  job collects every week rarely make it in.
-- **A playbook is your own folder.** It lives on your computer or in a Claude Project, so Claude
-  writes each fix straight in after a run, saves approved examples, and adds a check so the same
-  mistake doesn't come back.
-- **One skill, many playbooks.** This skill is the method: interview, run, check, correct. Each job
-  you add is just another folder, not another skill to write and install.
+- **Memory between runs.** A skill starts every run from the same files. A playbook keeps a
+  `state.md`: what was already handled (emails triaged, invoices chased and when), what's
+  still open, when it last ran. That changes on every run and nobody needs to review it. In
+  a skill, each of those changes would need your approval in the app.
+- **Its own reviewer.** After the checks, someone who didn't do the work reviews the output: a
+  sub-agent when the chat has one. What it can fix is fixed before you see it; the rest is
+  logged, and a problem flagged three times becomes a rule proposed to you. On scheduled runs
+  nobody watches, that's the only feedback the job gets, and it's kept.
+- **Corrections that land as you work.** When you correct a run, Claude writes the fix into the
+  right file straight away. Rules still change only with your agreement.
+- **One skill, many jobs.** This skill is the method; each job you add is just another folder.
 
-A playbook is your job, written down, and it changes every time you correct it.
+In short: skills tell Claude how to do a job. A playbook also remembers what it handled, what
+you corrected, and what its own reviewer flagged. So it gets better even on the runs you
+don't watch.
 
-The trade-off: a skill works in every chat, while a playbook works only where its folder is
-connected or inside its Project. A good split is to keep a job as a playbook while it's still
-collecting corrections, and turn it into a skill once its notes stop growing.
+**The trade-off:** a skill works in every chat; a playbook works only where its folder is
+connected or inside its Project. **A good test:** does this job need to remember anything from
+last time? If not, a skill is enough. Once a playbook's rules stop changing, its steps can
+become a skill, and the folder keeps only its memory.
 
 ## Install
 

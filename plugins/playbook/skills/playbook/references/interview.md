@@ -68,7 +68,10 @@ well when shown them. Say what you sampled and how much, and keep it read-only.
 8. **What a bad version looks like.** This is often where the real rules come out.
 9. **What not to touch.** "Is there anything I shouldn't read, open or change at all?"
    (banks, health, a folder of contracts). Write the answer into `rules.md` as a hard rule.
-10. **When it should run.** If the job is recurring: how often, what time, which timezone.
+10. **What it must remember.** "What does next week's run need to know about this one?"
+    (what's already been sent or chased, open items, the last date it ran). This goes in
+    `state.md`. If the answer is "nothing", say so: a plain skill may be enough for this job.
+11. **When it should run.** If the job is recurring: how often, what time, which timezone.
     You'll need this for `references/scheduling.md`.
 
 ## Write the playbook
@@ -90,7 +93,8 @@ Add an entry to `PLAYBOOKS.md`: name, folder, "when to use this" line, date crea
 
 Save any material the user gave you: approved past outputs into `references/examples/`,
 templates into `assets/`, names and targets into `references/data.md`. List each in
-`references/INDEX.md`.
+`references/INDEX.md`. Fill `state.md` with what the job must remember (question 10), or
+note that it has nothing to remember yet.
 
 ## Review with the user
 

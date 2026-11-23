@@ -1,15 +1,19 @@
 ---
 name: playbook
-description: Build and run playbooks, one folder per job the user repeats (steps, scripts, reference files, good examples, checks, a corrections log), kept on their computer or in a Claude Project and improved every time they correct the output. Use whenever the user says "set up my playbooks", "make a playbook for X", "do my weekly X", "run my X playbook", "what playbooks do I have", or describes work they do every week and want to hand off, such as client updates, invoice chasing, content repurposing, reports or hiring screens. Also use right after a playbook run when the user corrects the result ("that's wrong again", "same mistake as last time", "no, it should be...") so the fix goes into the playbook and not just the chat, and when they approve a result ("perfect, keep this") so the good version is saved as a template, example or script. Use it even when the user doesn't say "playbook" if a PLAYBOOKS.md file is in the connected folder or the Project's files.
+description: Build and run playbooks, one folder per job the user repeats (steps, scripts, reference files, good examples, checks, a corrections log, and memory of what earlier runs handled), kept on their computer or in a Claude Project, reviewed after every run and improved every time they correct the output. Use whenever the user says "set up my playbooks", "make a playbook for X", "do my weekly X", "run my X playbook", "what playbooks do I have", or describes work they do every week and want to hand off, such as client updates, invoice chasing, content repurposing, reports or hiring screens. Also use right after a playbook run when the user corrects the result ("that's wrong again", "same mistake as last time", "no, it should be...") so the fix goes into the playbook, not the chat, and when they approve a result ("perfect, keep this") so the good version is saved as a template, example or script. Use it even when the user doesn't say "playbook" if a PLAYBOOKS.md file is in the connected folder or the Project's files.
 ---
 
 # Playbook
 
 A playbook is one folder per job the user repeats. It holds their judgment written down
 (the steps and the rules for each decision), the tools that worked (scripts, templates,
-reference data, approved examples), checks that can fail, and a log of every correction.
-Each time the user corrects an output, the fix goes into the folder, so next week's run
-starts smarter. The chat closes; the folder remains.
+reference data, approved examples), checks that can fail, a log of every correction, and
+the job's memory: what earlier runs handled and what's still open.
+
+A skill tells Claude how to do a job, and every change to it needs the user's approval.
+A playbook also remembers what it handled, what the user corrected, and what its own
+reviewer flagged, in a folder Claude can write to as it works. So it gets better even on
+the runs nobody watches. The chat closes; the folder remains.
 
 The method comes from "The AI Delegation Loop" by The Actionable AI
 (theactionableai.com/guides/ai-delegation-loop). The wording here is our own.
@@ -74,7 +78,7 @@ doing playbook work.
         ├── scripts/             code for mechanical steps and for checks
         ├── references/          INDEX.md, rules, reference data, examples/
         ├── assets/              templates copied into the output
-        ├── state.md             recurring jobs only: last run and ids already handled
+        ├── state.md             memory between runs: last run, what's handled, what's open
         └── notes.md             corrections log, newest first
 ```
 

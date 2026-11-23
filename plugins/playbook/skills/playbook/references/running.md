@@ -11,7 +11,9 @@ doesn't happen again. If none matches, say so and offer to make one
 
 Read the playbook's `PLAYBOOK.md`, its `references/INDEX.md`, `references/rules.md` (rules
 apply to every output, whether or not a step mentions them), and the latest entries in
-`notes.md` (recent corrections are the rules most likely to be broken again). Read the
+`notes.md` (recent corrections are the rules most likely to be broken again), and
+`state.md` (what earlier runs already handled and what they left open; skip anything
+already handled and pick up what was carried forward). Read the
 other files when a step calls for them, not all up front.
 
 Paths in `PLAYBOOK.md` are relative to the playbook's own folder. A file kept elsewhere is
@@ -62,7 +64,13 @@ Have someone who didn't do the work review it, following `references/review.md`:
 sub-agent if this session can start one, otherwise a separate review pass. Fix what it
 finds that can be fixed now; log the rest under "Suspected" in `notes.md`.
 
-## 6. Hand over and ask the two questions
+## 6. Update the memory
+
+Write this run into `state.md`: the date and time, what it handled, and anything left
+open for next time. No approval is needed; it's working memory, not rules. Then read it
+back. If the write fails, say so: the next run would repeat or miss work.
+
+## 7. Hand over and ask the two questions
 
 Give the output, the check report and the review in a few lines, then:
 
