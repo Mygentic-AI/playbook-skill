@@ -4,6 +4,15 @@ Job: [one sentence, e.g. "Every Monday, send each client last week's spend again
 
 Purpose: [one line]
 
+## Intent
+<!-- Why this job exists, in the user's words. Claude decides by this when no rule covers a
+     case, and asks when the intent doesn't settle it. -->
+- What I want: [the outcome, e.g. "a clean inbox I'm not afraid to open"]
+- What I'm afraid of: [what must never be missed, e.g. "anything that could cause me harm,
+  confusion or problems later if I don't read it"]
+- The trade-off: [e.g. "most email can go unread with no harm; the rest must reach me"]
+- Decide on your own when: [...]. Ask me when: [...].
+
 ## When to use this
 [One or two lines specific enough that no other playbook matches the same request.]
 

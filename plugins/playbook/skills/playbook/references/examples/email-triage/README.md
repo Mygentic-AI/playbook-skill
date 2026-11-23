@@ -19,7 +19,12 @@ What it shows:
 
 ## Questions this example adds to the interview
 
-Ask this first, before reading anything: **Is there any mail I should never open (banks,
+Start with the intent (the general interview does this): what a clean inbox would give them, and
+what they're afraid of missing. A typical answer: "Most email I can ignore, but anything that could
+cause me harm, confusion or problems later if I didn't read it must reach me." That becomes the harm
+test in step 3.
+
+Then ask this, before reading anything: **Is there any mail I should never open (banks,
 health, legal)?** Write it into rules.md as "Never read"; that mail is sorted by sender and
 subject only. Then sample the last two weeks of the inbox, skipping that mail, and show
 the user the senders grouped by kind: it is much easier to name VIPs and categories from
@@ -39,6 +44,8 @@ a real list.
 10. Recommend a summary email, boldly: "I'd like to email you a short summary after each
    run, so you see what needs you without opening anything else. Shall I?" No warnings
    about sending: it goes to their own address only.
+11. Which topics matter to you wherever they turn up, even inside newsletters you don't read? (They go
+    in references/topics.md.)
 
 In this example `references/people.md` replaces the generic template's `data.md`, and
 `state.md` holds the last-run date so it isn't buried in the corrections log.

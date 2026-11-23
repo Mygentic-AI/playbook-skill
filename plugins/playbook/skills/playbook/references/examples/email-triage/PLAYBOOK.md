@@ -4,6 +4,16 @@
 
 Purpose: sort everything new in [the user's inbox] and draft replies to what needs one today.
 
+## Intent
+- What I want: [a clean inbox I'm not afraid to open, where the things that matter don't get lost].
+- What I'm afraid of: [missing something that could cause me harm, confusion or problems later:
+  a deadline, a payment, a change to an account or a plan, something I'm expected to act on].
+- The trade-off: [most email can go unread and nothing bad happens. The rest must reach me.]
+- Newsletters: [I don't want to read them, but certain topics matter to me wherever they turn up
+  (references/topics.md).]
+- Decide on your own when: [it's clearly harmless to leave unread]. Ask me when: [you're not sure
+  whether missing it could hurt me].
+
 ## When to use this
 "Triage my email", "go through my inbox", "what needs a reply today?"
 
@@ -11,6 +21,7 @@ Purpose: sort everything new in [the user's inbox] and draft replies to what nee
 - New email since the last run, from the [Gmail / Outlook] connector. Last run date: state.md.
 - references/people.md: VIPs and who handles what.
 - references/rules.md: what may and may not be done in the inbox.
+- references/topics.md: topics to watch for, in any email or newsletter.
 
 ## Steps
 1. Read references/rules.md. Note whether sending to other people is on or off.
@@ -25,10 +36,19 @@ Purpose: sort everything new in [the user's inbox] and draft replies to what nee
    - **Newsletters and receipts.**
 
    Possible phishing goes in FYI with the flag "possible phishing" and is listed first in the summary.
+   **Harm test, for anything headed to FYI or Newsletters:** could not reading this cause the user
+   harm, confusion or problems later (a deadline, money, a change to an account, a plan or a
+   commitment, something they're expected to act on)? If yes, it goes to Reply today or Waiting on
+   me, flagged "could matter later", with one line saying why. If you can't tell, put it in
+   "Needs your call".
+   **Watched topics:** scan FYI and Newsletters for the topics in references/topics.md. Pull each
+   match into the summary as one line (the topic, what it says, which email), so the user doesn't
+   have to open the newsletter.
 4. Draft a reply for every "Reply today" email (except anything flagged as possible phishing), using assets/reply-templates.md and the tone in rules.md.
    Save drafts as drafts in the mail app. Do not send.
 5. Write triage.json (format in scripts/check_triage.py) and run the checks.
-6. Give the summary: what needs the user first, then counts per category, then each "Reply today" email
+6. Give the summary: what needs the user first, then anything flagged "could matter later", then
+   watched-topic items, then counts per category, then each "Reply today" email
    in one line with its draft. Email it to the user's own address if rules.md says yes.
 7. If sending is on: list the drafts and send only the ones the user approves in the chat, by number.
 8. Update state.md: this run's date and time, and this run's ids at the top of "Handled ids".
@@ -54,8 +74,8 @@ Purpose: sort everything new in [the user's inbox] and draft replies to what nee
 
 ## Reviewer focus
 A fresh reviewer (references/review.md in the skill) reads each draft against the email it answers and checks:
-does it answer every question asked, does it promise anything the user hasn't agreed to, and is anything
-filed as FYI that a person would reply to today.
+does it answer every question asked, does it promise anything the user hasn't agreed to, and does anything
+filed as FYI or Newsletters fail the harm test, or mention a watched topic that wasn't pulled out.
 
 ## Edge cases
 - Connector not available: stop and say so. Don't triage from pasted text unless the user asks.

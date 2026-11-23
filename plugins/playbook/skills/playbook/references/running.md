@@ -22,7 +22,9 @@ ambiguous, fix it in `PLAYBOOK.md` after the run.
 
 ## 3. Do the steps
 
-Follow the steps in order and apply the decisions as written. Use saved templates,
+Follow the steps in order and apply the decisions as written. When a case isn't covered by
+any rule, decide by the "Intent" section, say in the hand-over that you did, and add it to
+"Needs your call" so it can become a rule. If the intent doesn't settle it either, ask. Use saved templates,
 examples and scripts rather than rebuilding them; that's what they're for. If a step
 can't be done:
 

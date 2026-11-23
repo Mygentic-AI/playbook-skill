@@ -117,7 +117,8 @@ Gmail or Outlook connector switched on. In a Project or with your Playbooks fold
 Make me an email triage playbook.
 ```
 
-✅ Says it's starting from the example template; first asks what mail it must never open,
+✅ Says it's starting from the example template; asks first what a clean inbox would give you and what
+you're afraid of missing (the intent), then what mail it must never open,
 before reading anything; boldly recommends labelling and a summary email to your own
 address (no warnings about sending) and does each only after your yes; asks about your VIPs, categories and what
 it may do in the inbox, one question at a time; the files it writes have no "EXAMPLE
@@ -129,7 +130,8 @@ Then:
 Triage my email.
 ```
 
-✅ Every new email in one category, drafts saved as drafts, a summary email in your own inbox, check report shows sorted-once,
+✅ Anything that could cause you trouble later is flagged "could matter later" even if it looked like FYI;
+watched topics from newsletters appear as one-line items; every new email in one category, drafts saved as drafts, a summary email in your own inbox, check report shows sorted-once,
 VIPs and no-send as PASS, and nothing was sent, labelled, archived or deleted.
 
 ## J. Schedule a playbook (after D and E)

@@ -6,6 +6,7 @@
 |---|---|---|---|---|
 | references/people.md | VIPs, who handles what | every run, step 3 | — | [date] |
 | references/rules.md | inbox permissions, tone | every run | — | [date] |
+| references/topics.md | topics to watch for in any email | every run, step 3 | — | [date] |
 | assets/reply-templates.md | reply shapes | drafting, step 4 | the email needs a one-off answer | [date] |
 | references/examples/approved-draft.md | what a good draft looks like | drafting | — | [date] |
 | state.md | last-run date | every run, steps 2 and 8 | — | [date] |
