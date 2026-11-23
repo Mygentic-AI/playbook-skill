@@ -3,10 +3,7 @@
 A skill for the Claude app that turns the work you repeat into **playbooks**: one folder
 per job, holding the steps, the tools that worked, checks that can fail, and a log of every
 correction. When Claude gets something wrong, it fixes the playbook, not just the answer,
-so next week's run starts better.
-
-Based on the method in [The AI Delegation Loop](https://theactionableai.com/guides/ai-delegation-loop/read)
-by The Actionable AI. The skill's wording and prompts are our own.
+so the next run starts better.
 
 ## Install
 
