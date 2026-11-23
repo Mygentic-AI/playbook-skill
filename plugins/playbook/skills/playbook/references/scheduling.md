@@ -73,8 +73,8 @@ there.
 - **Keep a full record too,** in the home (for example `reports/YYYY-MM-DD.md`), newest
   run at the top. Remove old records after a period the user picks.
 - **Notification text leads with what needs the user,** then the counts, then the path.
-- **Include the reviewer's findings** (`references/review.md`). On a run nobody watches,
-  they are the only feedback it gets.
+- **Include the reviewer's two lists** (`references/review.md`): what it fixed and updated,
+  and what needs the owner's call. On a run nobody watches, they are the only feedback it gets.
 
 ## 4. Owner
 

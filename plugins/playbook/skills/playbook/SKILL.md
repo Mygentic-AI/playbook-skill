@@ -119,8 +119,9 @@ a yes; it may hold other people's messages.
 - **Fix the playbook, not the chat.** A correction typed into chat is gone next week.
   Write it into the folder, then rerun.
 - **Someone who didn't do the work reviews it.** After the checks, a fresh reviewer (a
-  sub-agent when the session has one) looks for what scripts can't measure. What it can't
-  fix now is logged, and a pattern becomes a proposed rule, never a silent one.
+  sub-agent when the session has one) looks for what scripts can't measure. What it is
+  certain breaks a written rule is fixed and the playbook tightened; what could go either
+  way is put to the user with a suggested rule. Every playbook change is reported.
 - **A check that cannot fail is not a check.** "Looks professional" proves nothing. "Every
   figure appears in the source file" can be checked and can fail. Without real checks the
   user is still the quality control, which is the job they were handing over.

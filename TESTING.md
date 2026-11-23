@@ -155,6 +155,7 @@ questions). Then:
 Do my <job name>.
 ```
 
-✅ After the checks, a reviewer looks at the output and says whether it was a sub-agent or a self-review pass;
-the planted problem is fixed before you see the output, or logged under "Suspected" in `notes.md` with a quote
-as evidence; no rule in `rules.md` changed without asking you.
+✅ After the checks, a reviewer looks at the output and says whether it was a sub-agent or a self-review pass.
+The run ends with two lists. "Fixed, and the playbook updated" holds only things that broke a rule you already
+wrote, each with what changed and where. "Needs your call" holds anything that could go either way, each with a
+suggested rule; nothing in `rules.md` changes until you answer.

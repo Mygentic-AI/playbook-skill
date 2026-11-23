@@ -37,7 +37,7 @@
     {
       "id": 5,
       "prompt": "do my weekly client update for ACME Group",
-      "expected_output": "After the checks pass, runs an independent review (a sub-agent if available, otherwise a separate review pass, and says which). The reviewer gets only the output, sources, definition of done, rules and examples. Fixable findings are fixed before handing over; others are logged under 'Suspected' in notes.md with evidence; no rule is changed without the user agreeing.",
+      "expected_output": "After the checks pass, runs an independent review (a sub-agent if available, otherwise a separate review pass, and says which). The reviewer gets only the output, sources, definition of done, rules and examples, pasted in. The run ends with two lists: 'Fixed, and the playbook updated' (only findings that break something already written, fixed in the output and enforced in the playbook, each change named) and 'Needs your call' (ambiguous findings with a suggested rule, logged under Suspected; no new rule written until the user answers).",
       "files": [
         "evals/files/home-with-playbook/"
       ]

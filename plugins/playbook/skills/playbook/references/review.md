@@ -38,28 +38,49 @@ Ask it for at most five findings, each with:
 
 1. what is wrong, in one line;
 2. the evidence: a quote from the output and, where relevant, from the source or a rule;
-3. whether it can be fixed in this output, or points at the playbook itself;
-4. how sure it is (sure / likely / unsure).
+3. which kind it is (below).
 
 Tell it to report nothing rather than pad the list. A finding without evidence is dropped.
 
-## What to do with the findings
+## Two kinds of finding
 
-- **Fixable in this output, and sure or likely:** fix it before handing over, and mention
-  the fix in one line.
-- **Unsure, or about the playbook itself:** don't change anything. Add one line to the
-  "Suspected" section of `notes.md`:
-  `YYYY-MM-DD | reviewer | what it flagged | evidence`.
-- **The same thing flagged three times** (check "Suspected"): propose a rule or a check to
-  the user in plain words, with the dated lines as evidence. Change `rules.md` or add a
-  check only if they agree. The reviewer improves outputs on its own; it never rewrites
-  the playbook on its own.
-- **The user later says a flagged item was fine:** remove it from "Suspected" and, if it
-  keeps coming up, add a line to the reviewer brief section of `PLAYBOOK.md` saying it is
-  not a problem. A reviewer that cries wolf gets ignored.
+**1. Certain: it breaks something already written down.** The output contradicts a rule in
+`rules.md`, a step or decision in `PLAYBOOK.md`, a check, or the source itself, and the
+quote proves it. Example: a sender listed as a VIP in `people.md` was filed as FYI.
+
+- Fix the output.
+- Then update the playbook so it can't slip through again: add or tighten a check, clarify
+  the step that allowed it, or add the case to an example. Log it in `notes.md` as a
+  correction.
+- **Only enforce what the user already said.** If the fix needs a decision they have never
+  made (a new rule, a new category, a change of tone), it is not certain: treat it as kind 2.
+
+**2. Unsure: it might be wrong, or it could go either way.** Example: "I put this in FYI, but
+it could be reply-today." Or a draft that may be too blunt for this client.
+
+- Don't change the playbook.
+- Explain the doubt in one or two lines and **propose a rule that would settle it**
+  ("Emails that ask a direct question go to reply-today, even from newsletters' senders?").
+- Log it under "Suspected" in `notes.md` until the user answers. When they do, write the
+  rule into `rules.md` (or record that it's not a problem) and remove the line.
+
+## Report both, after the output
+
+End every run with the two lists, in plain words, before the after-run questions:
+
+> **Fixed, and the playbook updated:**
+> - Northwind's email was filed as FYI; they're a VIP. Moved to reply-today, and the VIP
+>   check now also matches their second address (people.md, check_triage.py).
+>
+> **Needs your call:**
+> - The Delta Print email asks a question but reads like a newsletter. I put it in FYI.
+>   Suggested rule: "Any email that asks me a direct question goes to reply-today." Add it?
+
+If a list is empty, say "Nothing fixed" or "Nothing needs your call". Never let a playbook
+change go unreported.
 
 ## Unattended runs
 
-When a scheduled run has nobody watching, the reviewer is the only feedback it gets. Put
-its findings, fixed and unfixed, in the run's report and its notification, so the owner
-sees them next time they look.
+When a scheduled run has nobody watching, the reviewer is the only feedback it gets. Kind 1
+fixes and playbook updates go ahead as above; kind 2 questions wait. Put both lists in the
+run's report and its notification, so the owner sees them next time they look.

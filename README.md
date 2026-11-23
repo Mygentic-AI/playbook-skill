@@ -16,9 +16,11 @@ copy one and change it. So what does a playbook add?
   still open, when it last ran. That changes on every run and nobody needs to review it. In
   a skill, each of those changes would need your approval in the app.
 - **Its own reviewer.** After the checks, someone who didn't do the work reviews the output: a
-  sub-agent when the chat has one. What it can fix is fixed before you see it; the rest is
-  logged, and a problem flagged three times becomes a rule proposed to you. On scheduled runs
-  nobody watches, that's the only feedback the job gets, and it's kept.
+  sub-agent when the chat has one. Anything that clearly breaks a rule you already wrote is
+  fixed, and the playbook tightened so it can't happen again. Anything that could go either
+  way comes back to you with a suggested rule. Every run ends with both lists: "Fixed, and the
+  playbook updated" and "Needs your call". On scheduled runs nobody watches, that's the only
+  feedback the job gets, and it's kept.
 - **Corrections that land as you work.** When you correct a run, Claude writes the fix into the
   right file straight away. Rules still change only with your agreement.
 - **One skill, many jobs.** This skill is the method; each job you add is just another folder.

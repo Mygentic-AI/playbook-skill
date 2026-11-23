@@ -61,8 +61,9 @@ user which part of the playbook let it happen (see `references/corrections.md`).
 ## 5. Independent review
 
 Have someone who didn't do the work review it, following `references/review.md`: a
-sub-agent if this session can start one, otherwise a separate review pass. Fix what it
-finds that can be fixed now; log the rest under "Suspected" in `notes.md`.
+sub-agent if this session can start one, otherwise a separate review pass. What it is
+certain about is fixed, and the playbook updated so it can't recur; what it is unsure
+about becomes a question for the user with a suggested rule.
 
 ## 6. Update the memory
 
@@ -72,7 +73,8 @@ back. If the write fails, say so: the next run would repeat or miss work.
 
 ## 7. Hand over and ask the two questions
 
-Give the output, the check report and the review in a few lines, then:
+Give the output, the check report, and the review's two lists ("Fixed, and the playbook
+updated" and "Needs your call"), then:
 
 1. "Anything wrong? I'll fix the playbook itself, not just this answer."
 2. "Worth keeping any of this as a template, example or script?"

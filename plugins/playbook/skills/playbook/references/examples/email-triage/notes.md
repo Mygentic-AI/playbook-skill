@@ -6,4 +6,4 @@
 
 ## Suspected
 
-[YYYY-MM-DD] | reviewer | draft to [sender] doesn't answer their second question | "Can you also send the Q3 numbers?" not addressed
+[YYYY-MM-DD] | reviewer | newsletter-style email from [sender] asks a direct question; filed as FYI | "Could you confirm by Friday?" | suggested rule: any email that asks me a direct question goes to reply-today

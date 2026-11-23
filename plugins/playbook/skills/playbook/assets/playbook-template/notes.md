@@ -4,6 +4,6 @@
 
 ## Suspected
 
-<!-- Flagged by the reviewer but not confirmed by the user. Newest first.
-     date | reviewer | what it flagged | evidence
-     Three lines about the same thing: propose a rule or check to the user. -->
+<!-- Reviewer's "needs your call" items, waiting for the user. Newest first.
+     date | reviewer | what it's unsure about | evidence | suggested rule
+     When the user answers, write the rule (or "not a problem") and remove the line. -->
