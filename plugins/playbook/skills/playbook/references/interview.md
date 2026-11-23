@@ -47,8 +47,8 @@ their own channel) carries no such risk: recommend it.
 ## Look at the data before you ask about it
 
 When the job works on data a connector can show you (an inbox, a folder, a sheet, a
-calendar), first ask: "Is there anything I shouldn't open, like bank, health or legal
-mail?" Write the answer into `rules.md` as "Never read". Then pull a real sample, skipping
+calendar), first ask: "Is there anything in there I shouldn't open, like bank, health
+or legal material?" Write the answer into `rules.md` as "Never read". Then pull a real sample, skipping
 anything on that list, before the questions about categories and rules: two weeks
 is usually enough to see the weekly repeats. Group it, propose the categories, and let
 the user correct them. People define their own mail or files badly from memory and very
