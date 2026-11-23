@@ -20,10 +20,10 @@ the two share data (see "Shared files" in `SKILL.md`).
 
 ## 2. Schedule
 
-Use the app's scheduled-task tool if this session has one (it may need to be searched
-for before it can be used). Call it a "scheduled task" when talking to the user. If there
-is no such tool here, say so plainly and give the user the one line to type each time
-instead ("do my <job name>"); don't pretend the job is automated.
+Claude can schedule tasks: use its scheduled-task tool (it may need to be searched for
+before it can be used). Call it a "scheduled task" when talking to the user. If creating
+the task fails, say so and what failed; never tell the user a job is scheduled until the
+task exists.
 
 Tell the user the conditions for unattended runs as the app states them (for example
 whether the computer must be awake and the desktop app open). If you can't tell, say that

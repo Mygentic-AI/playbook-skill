@@ -136,8 +136,7 @@ VIPs and no-send as PASS, and nothing was sent, labelled, archived or deleted.
 That run was right. Make it run on its own every weekday at 8am.
 ```
 
-✅ Adds a one-line "Job:" at the top of the playbook; creates a scheduled task (or says
-plainly it can't here); tells you the conditions for unattended runs; asks where you
+✅ Adds a one-line "Job:" at the top of the playbook; creates a scheduled task; tells you the conditions for unattended runs; asks where you
 already look and who checks the output until when; records the schedule in
 `PLAYBOOKS.md` as "not yet verified".
 
