@@ -30,7 +30,11 @@ Give the reviewer only:
 - the approved examples in `references/examples/`, if any;
 - the "Suspected" section of `notes.md`, so it knows what it flagged before.
 
-Not the drafting conversation. Ask it for at most five findings, each with:
+Not the drafting conversation. Paste the text of these into the brief rather than giving
+paths: sub-agents run in the cloud, so one asked to open files in a folder on the user's
+computer fails whenever that computer is asleep or offline.
+
+Ask it for at most five findings, each with:
 
 1. what is wrong, in one line;
 2. the evidence: a quote from the output and, where relevant, from the source or a rule;

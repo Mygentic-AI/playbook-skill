@@ -107,6 +107,10 @@ Working from the phone with files on the computer:
 - A phone chat reaches the computer through the desktop app while it's open, and can list
   the files in a connected folder.
 
+Sub-agents for the review step:
+- Available in the Claude app, including chats opened from the phone; they run in the cloud.
+  Which tools a chat gets can vary by session, so the skill falls back to a self-review pass.
+
 Not tested yet:
 - Opening or writing files in a computer folder from the phone.
 - Phone and desktop opening the same Project's playbooks.
